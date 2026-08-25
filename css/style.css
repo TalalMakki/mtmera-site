@@ -732,6 +732,8 @@ html[dir="rtl"] .marquee-track{ animation-direction: reverse; }
   background: rgba(255,255,255,.16); display:flex; align-items:center; justify-content:center;
 }
 .contact-line .ic svg{ width:19px; height:19px; }
+.contact-line a{ transition: opacity var(--dur-fast); }
+.contact-line a:hover{ opacity:.8; text-decoration: underline; }
 .social-row{ display:flex; gap:10px; margin-top:auto; }
 .social-row a{
   width:40px; height:40px; border-radius:50%;
