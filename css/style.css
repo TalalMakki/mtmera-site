@@ -504,8 +504,8 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
 }
 @media (min-width:640px){ .clients-grid{ grid-template-columns: repeat(4,1fr); } }
 .client-card{
-  display:flex; align-items:center; justify-content:center;
-  height:112px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap: var(--space-3);
   padding: var(--space-5);
   background:#ffffff;
   border:1px solid var(--border);
@@ -513,7 +513,9 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
   transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
 }
 .client-card:hover{ transform: translateY(-4px); box-shadow: 0 20px 40px -24px hsl(var(--shadow-color) / .4); }
-.client-card img{ max-height:100%; width:auto; max-width:100%; object-fit:contain; }
+.client-logo{ display:flex; align-items:center; justify-content:center; height:64px; width:100%; }
+.client-logo img{ max-height:100%; width:auto; max-width:100%; object-fit:contain; }
+.client-name{ font-size:13.5px; font-weight:700; color:#4c5f7d; text-align:center; }
 
 /* =========================================================
    About
