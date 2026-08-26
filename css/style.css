@@ -496,6 +496,26 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
 .highlight-item small{ font-size:13px; color: var(--text-soft); }
 
 /* =========================================================
+   Clients
+   ========================================================= */
+.clients-grid{
+  display:grid; gap: var(--space-5);
+  grid-template-columns: repeat(2,1fr);
+}
+@media (min-width:640px){ .clients-grid{ grid-template-columns: repeat(4,1fr); } }
+.client-card{
+  display:flex; align-items:center; justify-content:center;
+  height:112px;
+  padding: var(--space-5);
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+.client-card:hover{ transform: translateY(-4px); box-shadow: 0 20px 40px -24px hsl(var(--shadow-color) / .4); }
+.client-card img{ max-height:100%; width:auto; max-width:100%; object-fit:contain; }
+
+/* =========================================================
    About
    ========================================================= */
 .about-grid{ display:grid; gap: var(--space-8); }
