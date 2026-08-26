@@ -555,6 +555,7 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
   background: var(--surface);
   border: 1px solid var(--border);
   overflow:hidden;
+  cursor:pointer;
   transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base);
 }
 .service-card::before{

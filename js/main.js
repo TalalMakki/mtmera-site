@@ -237,7 +237,7 @@
     });
   }
 
-  /* ---------------- Contact form (mailto handoff) ---------------- */
+  /* ---------------- Contact form (WhatsApp handoff) ---------------- */
   var form = document.getElementById('contactForm');
   var formSuccess = document.getElementById('formSuccess');
   var isAr = function () { return html.getAttribute('lang') === 'ar'; };
@@ -291,18 +291,47 @@
       var subject = form.querySelector('#fSubject').value.trim();
       var message = form.querySelector('#fMessage').value.trim();
 
-      var body = (isAr() ? 'الاسم' : 'Name') + ': ' + name + '\n' +
-                 (isAr() ? 'البريد الإلكتروني' : 'Email') + ': ' + email + '\n\n' + message;
+      var lines = [
+        (isAr() ? 'الاسم' : 'Name') + ': ' + name,
+        (isAr() ? 'البريد الإلكتروني' : 'Email') + ': ' + email,
+        (isAr() ? 'الخدمة/الموضوع' : 'Service / Subject') + ': ' + subject,
+        '',
+        message
+      ];
 
-      var mailto = 'mailto:info@mtmera.com' +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(body);
-
-      window.location.href = mailto;
+      var waText = encodeURIComponent(lines.join('\n'));
+      window.open('https://wa.me/201142006128?text=' + waText, '_blank', 'noopener');
 
       formSuccess.classList.add('show');
       setTimeout(function () { formSuccess.classList.remove('show'); }, 6000);
       form.reset();
     });
   }
+
+  /* ---------------- Service cards: request this service via WhatsApp form ---------------- */
+  document.querySelectorAll('.service-card[data-service-en]').forEach(function (card) {
+    function requestService() {
+      var subjectField = document.getElementById('fSubject');
+      var messageField = document.getElementById('fMessage');
+      if (subjectField) {
+        subjectField.value = isAr() ? card.getAttribute('data-service-ar') : card.getAttribute('data-service-en');
+      }
+      var contactTarget = document.getElementById('contact');
+      if (contactTarget) {
+        var headerH = header.offsetHeight;
+        var top = contactTarget.getBoundingClientRect().top + window.pageYOffset - headerH + 1;
+        window.scrollTo({ top: top, behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+      if (messageField) {
+        setTimeout(function () { messageField.focus(); }, reduceMotion ? 0 : 500);
+      }
+    }
+    card.addEventListener('click', requestService);
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        requestService();
+      }
+    });
+  });
 })();
