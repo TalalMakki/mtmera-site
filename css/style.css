@@ -465,12 +465,21 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
   backdrop-filter: blur(10px);
   animation: chip-float 7s ease-in-out infinite;
 }
-.node-chip svg{ width:15px; height:15px; color: var(--teal-500); }
+.node-chip svg{ width:15px; height:15px; color: var(--teal-500); flex-shrink:0; }
 .node-chip.c1{ top:6%; inset-inline-start:-6%; animation-delay: -1s; }
 .node-chip.c2{ bottom:12%; inset-inline-end:-10%; animation-delay: -3.5s; }
 .node-chip.c3{ top:52%; inset-inline-end:-14%; animation-delay: -5s; }
 @keyframes chip-float{ 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-10px);} }
 @media (prefers-reduced-motion: reduce){ .node-chip{ animation:none; } }
+
+@media (max-width:560px){
+  .hero-orb{ width: min(280px, 72vw); }
+  .node-chip{ padding: 7px 11px; gap:6px; font-size:11px; white-space:nowrap; }
+  .node-chip svg{ width:13px; height:13px; }
+  .node-chip.c1{ inset-inline-start: 6px; top:0; }
+  .node-chip.c2{ inset-inline-end: 6px; bottom:8%; }
+  .node-chip.c3{ inset-inline-end: 6px; }
+}
 
 /* =========================================================
    Highlights strip
