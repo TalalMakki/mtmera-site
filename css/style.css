@@ -455,7 +455,7 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
 .hero-orb-card img{ width:100%; }
 
 .node-chip{
-  position:absolute;
+  position:absolute; z-index:3;
   display:flex; align-items:center; gap:8px;
   background: var(--surface-glass-strong);
   border:1px solid var(--border-strong);
@@ -478,7 +478,7 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
   .node-chip svg{ width:13px; height:13px; }
   .node-chip.c1{ inset-inline-start: 6px; top:0; }
   .node-chip.c2{ inset-inline-end: 6px; bottom:8%; }
-  .node-chip.c3{ inset-inline-end: 6px; }
+  .node-chip.c3{ inset-inline-end: 6px; top:4%; }
 }
 
 /* =========================================================
