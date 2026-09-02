@@ -308,30 +308,14 @@
     });
   }
 
-  /* ---------------- Service cards: request this service via WhatsApp form ---------------- */
-  document.querySelectorAll('.service-card[data-service-en]').forEach(function (card) {
-    function requestService() {
-      var subjectField = document.getElementById('fSubject');
-      var messageField = document.getElementById('fMessage');
-      if (subjectField) {
-        subjectField.value = isAr() ? card.getAttribute('data-service-ar') : card.getAttribute('data-service-en');
-      }
-      var contactTarget = document.getElementById('contact');
-      if (contactTarget) {
-        var headerH = header.offsetHeight;
-        var top = contactTarget.getBoundingClientRect().top + window.pageYOffset - headerH + 1;
-        window.scrollTo({ top: top, behavior: reduceMotion ? 'auto' : 'smooth' });
-      }
-      if (messageField) {
-        setTimeout(function () { messageField.focus(); }, reduceMotion ? 0 : 500);
-      }
-    }
-    card.addEventListener('click', requestService);
-    card.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        requestService();
-      }
+  /* ---------------- Package "Subscribe" buttons: straight to WhatsApp ---------------- */
+  document.querySelectorAll('.price-cta[data-package-en]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var label = isAr() ? btn.getAttribute('data-package-ar') : btn.getAttribute('data-package-en');
+      var text = isAr()
+        ? 'مرحبًا، حابب أشترك في ' + label + '.'
+        : 'Hi, I\'d like to subscribe to the ' + label + '.';
+      window.open('https://wa.me/201142006128?text=' + encodeURIComponent(text), '_blank', 'noopener');
     });
   });
 })();
