@@ -1,7 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){
+  var t = localStorage.getItem('mtmera-theme');
+  if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MTMERA — Coming Soon</title>
 <meta name="description" content="This service page is coming soon — reach out to MTMERA directly and we'll get you started right away.">
