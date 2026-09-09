@@ -499,46 +499,63 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
 /* =========================================================
    Clients
    ========================================================= */
-.clients-grid{
-  display:grid; gap: var(--space-6);
-  grid-template-columns: 1fr;
-}
-@media (min-width:640px){ .clients-grid{ grid-template-columns: repeat(2,1fr); } }
-
-.project-card{
+.clients-list{
   display:flex; flex-direction:column;
-  background: var(--surface);
-  border:1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow:hidden;
-  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base);
+  border-top: 1px solid var(--border);
 }
-.project-card:hover{
-  transform: translateY(-6px);
-  border-color: transparent;
-  box-shadow: 0 30px 60px -24px hsl(var(--shadow-color) / .45);
-}
-.project-preview{ aspect-ratio: 16/10; overflow:hidden; background: var(--bg-soft); }
-.project-preview img{
-  width:100%; height:100%; object-fit:cover; object-position: top;
-  transition: transform var(--dur-slow) var(--ease-out);
-}
-.project-card:hover .project-preview img{ transform: scale(1.06); }
 
-.project-body{ padding: var(--space-5); display:flex; flex-direction:column; gap:6px; }
-.project-name{ font-size:18px; font-weight:800; color: var(--text); }
-.project-type{ font-size:13px; font-weight:600; color: var(--teal-600); }
-:root[data-theme="dark"] .project-type{ color: var(--cyan-300); }
-.project-desc{ font-size:14px; color: var(--text-muted); line-height:1.6; margin-top:2px; }
-.project-link{
+.client-row{
+  position:relative;
+  display:flex; align-items:center; flex-wrap:wrap; gap: var(--space-4);
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--dur-base) var(--ease-soft);
+}
+.client-row:hover{ background: var(--bg-soft); }
+
+.client-index{
+  width:26px; flex-shrink:0;
+  font-size:13px; font-weight:700; color: var(--text-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.client-thumb{ position:relative; display:block; width:56px; height:56px; flex-shrink:0; }
+.client-thumb img{
+  position:absolute; inset-inline-start:0; top:0;
+  width:100%; height:100%; max-width:none;
+  object-fit:cover; object-position: top;
+  border-radius: var(--radius-md);
+  background: var(--bg-soft);
+  box-shadow: 0 0 0 1px var(--border);
+  transition: width var(--dur-slow) var(--ease-out), height var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out), box-shadow var(--dur-base);
+}
+.client-row:hover .client-thumb img{
+  width:230px; height:146px;
+  transform: translateY(-45px);
+  box-shadow: 0 30px 60px -20px hsl(var(--shadow-color) / .5), 0 0 0 1px var(--border-strong);
+  z-index:5;
+}
+
+.client-info{ display:flex; flex-direction:column; gap:4px; flex:1 1 220px; min-width:0; }
+.client-name{ font-size:17px; font-weight:800; color: var(--text); }
+.client-type{ font-size:13px; font-weight:600; color: var(--teal-600); }
+:root[data-theme="dark"] .client-type{ color: var(--cyan-300); }
+.client-desc{ font-size:13.5px; color: var(--text-muted); }
+
+.client-link{
   display:inline-flex; align-items:center; gap:8px;
-  margin-top: var(--space-3);
-  font-size:14px; font-weight:700; color: var(--text);
+  margin-inline-start:auto;
+  font-size:14px; font-weight:700; color: var(--text-muted);
   transition: gap var(--dur-base) var(--ease-out), color var(--dur-base);
 }
-.project-link svg{ width:16px; height:16px; transition: transform var(--dur-base) var(--ease-out); }
-.project-card:hover .project-link{ color: var(--teal-600); gap:12px; }
-:root[data-theme="dark"] .project-card:hover .project-link{ color: var(--cyan-300); }
+.client-link svg{ width:16px; height:16px; flex-shrink:0; }
+.client-row:hover .client-link{ color: var(--teal-600); gap:12px; }
+:root[data-theme="dark"] .client-row:hover .client-link{ color: var(--cyan-300); }
+
+@media (max-width:640px){
+  .client-row{ gap: var(--space-3); }
+  .client-link{ margin-inline-start:0; width:100%; padding-inline-start: calc(26px + 56px + var(--space-3) + var(--space-4)); }
+}
 
 /* =========================================================
    About
