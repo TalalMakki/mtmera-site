@@ -529,9 +529,6 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
   transition: box-shadow var(--dur-base);
 }
 .client-logo img{ width:100%; height:100%; object-fit:contain; }
-.client-logo-text{
-  font-size:15px; font-weight:800; color: var(--navy-800); letter-spacing:-0.01em;
-}
 .client-row:hover .client-logo{ box-shadow: 0 0 0 1px var(--border-strong), 0 12px 28px -16px hsl(var(--shadow-color) / .4); }
 
 .client-info{ display:flex; flex-direction:column; gap:4px; flex:1 1 220px; min-width:0; }
