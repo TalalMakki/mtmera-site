@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  var t = localStorage.getItem('mtmera-theme');
+  if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MTMERA — Our Work</title>
+<meta name="description" content="A directory of websites, online stores and software MTMERA has designed, built and hosted for clients across industries.">
+<meta name="mtmera:title-ar" content="MTMERA — أعمالنا">
+<meta name="mtmera:desc-ar" content="دليل بالمواقع والمتاجر الإلكترونية والبرمجيات التي صممتها وطورتها واستضافتها MTMERA لعملائها في قطاعات متنوعة.">
+<link rel="canonical" href="https://mtmera.com/our-work.html">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-lang="en">Skip to content</a>
+<a class="skip-link" href="#main" data-lang="ar">تخطَّ إلى المحتوى</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="MTMERA home">
+      <img class="brand-mark" src="assets/logo-icon.png" alt="MTMERA logo">
+      <span class="brand-word">
+        <b>MTM<em>ERA</em></b>
+        <span data-lang="en">Software · Cloud · Hosting</span>
+        <span data-lang="ar">سوفت وير · سحابة · استضافة</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="services.html"><span data-lang="en">Services</span><span data-lang="ar">خدماتنا</span></a>
+      <a href="saas.html"><span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span></a>
+      <a href="solutions.html"><span data-lang="en">Solutions</span><span data-lang="ar">الحلول</span></a>
+      <a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a>
+      <a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a>
+      <a href="about.html"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a>
+      <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="index.html#contact" class="btn btn-primary nav-cta">
+        <span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span>
+      </a>
+      <button class="lang-btn" id="langToggle" type="button" aria-label="Change language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span data-lang="en">AR</span>
+        <span data-lang="ar">EN</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-scrim" id="navScrim"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="services.html"><span data-lang="en">Services</span><span data-lang="ar">خدماتنا</span></a>
+  <a href="saas.html"><span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span></a>
+  <a href="solutions.html"><span data-lang="en">Solutions</span><span data-lang="ar">الحلول</span></a>
+  <a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a>
+  <a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a>
+  <a href="about.html"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a>
+  <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a>
+  <a href="index.html#contact" class="mobile-nav-cta"><span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span></a>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="section-pad page-hero" style="padding-bottom:0">
+  <div class="container">
+    <div class="back-links-row" data-reveal>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-lang="en">Back to Home</span>
+        <span data-lang="ar">الرجوع للرئيسية</span>
+      </a>
+    </div>
+    <div class="section-head center">
+      <div class="eyebrow" data-reveal><span class="dot"></span>
+        <span data-lang="en">OUR WORK</span>
+        <span data-lang="ar">أعمالنا</span>
+      </div>
+      <h1 class="section-title" data-reveal>
+        <span data-lang="en">Projects We've Designed, Built &amp; Hosted</span>
+        <span data-lang="ar">مشاريع صممناها وطورناها واستضفناها</span>
+      </h1>
+      <p class="section-desc" data-reveal style="margin-inline:auto">
+        <span data-lang="en">A growing directory of client work across websites, e-commerce, software and SaaS.</span>
+        <span data-lang="ar">دليل متنامٍ لأعمال عملائنا في المواقع والمتاجر الإلكترونية والبرمجيات و SaaS.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK LIST ============ -->
+<section class="section-pad clients-section" style="padding-top:var(--space-6)">
+  <div class="container">
+    <!-- Filters: tabs are static; a category with no projects yet simply shows the empty state below. -->
+    <div class="filter-tabs" data-reveal role="tablist" aria-label="Filter projects by category">
+      <button type="button" class="filter-tab active" data-filter="all">
+        <span data-lang="en">All</span><span data-lang="ar">الكل</span>
+      </button>
+      <button type="button" class="filter-tab" data-filter="Websites">
+        <span data-lang="en">Websites</span><span data-lang="ar">مواقع</span>
+      </button>
+      <button type="button" class="filter-tab" data-filter="E-Commerce">
+        <span data-lang="en">E-Commerce</span><span data-lang="ar">متاجر إلكترونية</span>
+      </button>
+      <button type="button" class="filter-tab" data-filter="Software">
+        <span data-lang="en">Software</span><span data-lang="ar">برمجيات</span>
+      </button>
+      <button type="button" class="filter-tab" data-filter="SaaS">
+        <span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span>
+      </button>
+    </div>
+
+    <!--
+      To add a new project: duplicate a .client-row block below and set data-category
+      to one of: Websites, E-Commerce, Software, SaaS. If it should also appear in the
+      "Selected Work" section on the homepage, copy the same block into index.html.
+    -->
+    <div class="clients-list work-list">
+      <a class="client-row" data-reveal data-category="Websites" href="https://www.makkilabs.com" target="_blank" rel="noopener">
+        <span class="client-index">01</span>
+        <span class="client-logo"><img src="assets/clients/makki-lab.png" alt="MAKKI LAB logo"></span>
+        <span class="client-info">
+          <span class="client-name">MAKKI LAB</span>
+          <span class="client-type">
+            <span data-lang="en">Corporate Website · Healthcare</span>
+            <span data-lang="ar">موقع تعريفي · قطاع طبي</span>
+          </span>
+          <span class="client-desc">
+            <span data-lang="en">Website design, development &amp; hosting</span>
+            <span data-lang="ar">تصميم وتطوير واستضافة الموقع</span>
+          </span>
+        </span>
+        <span class="client-link">
+          <span data-lang="en">Visit Website</span>
+          <span data-lang="ar">زيارة الموقع</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a class="client-row" data-reveal data-category="Websites" href="https://talalmakki.github.io/fabrico-eg-preview/" target="_blank" rel="noopener">
+        <span class="client-index">02</span>
+        <span class="client-logo"><img src="assets/clients/fabrico-textile.png" alt="Fabrico Textile logo"></span>
+        <span class="client-info">
+          <span class="client-name">Fabrico Textile</span>
+          <span class="client-type">
+            <span data-lang="en">Corporate Website · Textile</span>
+            <span data-lang="ar">موقع تعريفي · صناعة نسيج</span>
+          </span>
+          <span class="client-desc">
+            <span data-lang="en">Website design, development &amp; hosting</span>
+            <span data-lang="ar">تصميم وتطوير واستضافة الموقع</span>
+          </span>
+        </span>
+        <span class="client-link">
+          <span data-lang="en">Visit Website</span>
+          <span data-lang="ar">زيارة الموقع</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a class="client-row" data-reveal data-category="Websites" href="https://www.niletexind.com" target="_blank" rel="noopener">
+        <span class="client-index">03</span>
+        <span class="client-logo"><img src="assets/clients/nile-textile.png" alt="Nile Textile Industries logo"></span>
+        <span class="client-info">
+          <span class="client-name">Nile Textile Industries</span>
+          <span class="client-type">
+            <span data-lang="en">Corporate Website · Industrial</span>
+            <span data-lang="ar">موقع تعريفي · صناعي</span>
+          </span>
+          <span class="client-desc">
+            <span data-lang="en">Website design, development &amp; hosting</span>
+            <span data-lang="ar">تصميم وتطوير واستضافة الموقع</span>
+          </span>
+        </span>
+        <span class="client-link">
+          <span data-lang="en">Visit Website</span>
+          <span data-lang="ar">زيارة الموقع</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a class="client-row" data-reveal data-category="E-Commerce" href="https://offgrid-store-two.vercel.app/" target="_blank" rel="noopener">
+        <span class="client-index">04</span>
+        <span class="client-logo"><img src="assets/clients/off-grid.png" alt="Off Grid Store logo"></span>
+        <span class="client-info">
+          <span class="client-name">Off Grid Store</span>
+          <span class="client-type">
+            <span data-lang="en">E-Commerce Store · Electronics</span>
+            <span data-lang="ar">متجر إلكتروني · إلكترونيات</span>
+          </span>
+          <span class="client-desc">
+            <span data-lang="en">Online store design, development &amp; hosting</span>
+            <span data-lang="ar">تصميم وتطوير واستضافة المتجر</span>
+          </span>
+        </span>
+        <span class="client-link">
+          <span data-lang="en">Visit Website</span>
+          <span data-lang="ar">زيارة الموقع</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a class="client-row" data-reveal data-category="Websites" href="https://talalmakki.github.io/nabd-clinics-website/" target="_blank" rel="noopener">
+        <span class="client-index">05</span>
+        <span class="client-logo"><img src="assets/clients/nabd-clinics.png" alt="Nabd Clinics logo"></span>
+        <span class="client-info">
+          <span class="client-name">Nabd Clinics</span>
+          <span class="client-type">
+            <span data-lang="en">Corporate Website · Healthcare</span>
+            <span data-lang="ar">موقع تعريفي · قطاع طبي</span>
+          </span>
+          <span class="client-desc">
+            <span data-lang="en">Website design, development &amp; hosting</span>
+            <span data-lang="ar">تصميم وتطوير واستضافة الموقع</span>
+          </span>
+        </span>
+        <span class="client-link">
+          <span data-lang="en">Visit Website</span>
+          <span data-lang="ar">زيارة الموقع</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="work-empty" id="workEmpty">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span data-lang="en">No projects in this category yet — check back soon.</span>
+      <span data-lang="ar">لا توجد مشاريع في هذا التصنيف بعد — تابعونا قريبًا.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="cta-banner" data-reveal>
+      <div class="cta-blob a"></div>
+      <div class="cta-blob b"></div>
+      <h2><span data-lang="en">Want to Be Our Next Project?</span><span data-lang="ar">حابب تكون مشروعنا القادم؟</span></h2>
+      <p><span data-lang="en">Tell us what you're building and let's get started.</span><span data-lang="ar">احكيلنا شو بتبني ونبدأ سوا.</span></p>
+      <div class="hero-cta">
+        <a href="index.html#contact" class="btn btn-primary btn-lg">
+          <span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" aria-label="MTMERA">
+        <img class="brand-mark" src="assets/logo-icon.png" alt="MTMERA">
+        <span class="brand-word"><b style="color:#fff">MTM<em>ERA</em></b></span>
+      </a>
+      <p><span data-lang="en">Software, digital solutions and SaaS products engineered for reliability, security and growth.</span>
+      <span data-lang="ar">برمجيات وحلول رقمية ومنتجات SaaS مصممة لتكون موثوقة وآمنة وقابلة للنمو.</span></p>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Company</span><span data-lang="ar">الشركة</span></h5>
+      <ul>
+        <li><a href="about.html"><span data-lang="en">About Us</span><span data-lang="ar">من نحن</span></a></li>
+        <li><a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a></li>
+        <li><a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a></li>
+        <li><a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Services &amp; SaaS</span><span data-lang="ar">الخدمات و SaaS</span></h5>
+      <ul>
+        <li><a href="services.html"><span data-lang="en">All Services</span><span data-lang="ar">كل الخدمات</span></a></li>
+        <li><a href="saas.html"><span data-lang="en">MTMERA SaaS</span><span data-lang="ar">MTMERA SaaS</span></a></li>
+        <li><a href="mtmera-business.html">MTMERA Business</a></li>
+        <li><a href="pricing.html"><span data-lang="en">SaaS Pricing</span><span data-lang="ar">أسعار SaaS</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Contact</span><span data-lang="ar">التواصل</span></h5>
+      <ul>
+        <li><a href="mailto:info@mtmera.com">info@mtmera.com</a></li>
+        <li><a href="tel:+201142006128" dir="ltr">+20 114 200 6128</a></li>
+        <li><a href="https://wa.me/201142006128" target="_blank" rel="noopener"><span data-lang="en">WhatsApp</span><span data-lang="ar">واتساب</span></a></li>
+        <li><a href="index.html#contact"><span data-lang="en">Send a Message</span><span data-lang="ar">أرسل رسالة</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>
+      <span data-lang="en">© 2026 MTMERA. All rights reserved.</span>
+      <span data-lang="ar">© 2026 MTMERA. جميع الحقوق محفوظة.</span>
+    </span>
+    <div class="footer-social">
+      <a href="https://wa.me/201142006128" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.3A10 10 0 1 0 12 2z"/><path d="M9 8.4a.9.9 0 0 1 .9-.9h.8a.9.9 0 0 1 .9.7l.3 1.3a.9.9 0 0 1-.25.85l-.66.65a6.4 6.4 0 0 0 2.9 2.9l.65-.66a.9.9 0 0 1 .85-.25l1.3.3a.9.9 0 0 1 .7.9v.8a.9.9 0 0 1-.9.9A7.6 7.6 0 0 1 9 8.4z"/></svg></a>
+      <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.filter-tab');
+  var rows = document.querySelectorAll('.work-list .client-row');
+  var emptyState = document.getElementById('workEmpty');
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+      var cat = tab.getAttribute('data-filter');
+      var visible = 0;
+      rows.forEach(function (row) {
+        var show = cat === 'all' || row.getAttribute('data-category') === cat;
+        row.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      emptyState.style.display = visible === 0 ? 'flex' : 'none';
+    });
+  });
+})();
+</script>
+</body>
+</html>

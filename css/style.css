@@ -277,7 +277,7 @@ html[dir="rtl"] .btn-primary:hover svg{ transform: translateX(-4px); }
 .brand-word b em{ font-style:normal; color: var(--teal-500); }
 .brand-word span{ font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color: var(--text-soft); font-weight:600; }
 
-.nav-links{ display:none; align-items:center; gap: var(--space-6); }
+.nav-links{ display:none; align-items:center; gap: 22px; }
 .nav-links a{
   position:relative;
   font-weight:600; font-size:15px; color: var(--text-muted);
@@ -294,9 +294,12 @@ html[dir="rtl"] .btn-primary:hover svg{ transform: translateX(-4px); }
 .nav-links a:hover{ color: var(--text); }
 .nav-links a:hover::after{ transform: scaleX(1); }
 
-@media (min-width: 960px){ .nav-links{ display:flex; } }
+@media (min-width: 1180px){ .nav-links{ display:flex; } }
 
 .header-actions{ display:flex; align-items:center; gap: var(--space-3); }
+
+.nav-cta{ display:none; padding: 12px 22px; font-size:14.5px; }
+@media (min-width:1180px){ .nav-cta{ display:inline-flex; } }
 .icon-btn{
   width:42px; height:42px; border-radius:50%;
   display:inline-flex; align-items:center; justify-content:center;
@@ -322,7 +325,7 @@ html[dir="rtl"] .btn-primary:hover svg{ transform: translateX(-4px); }
 :root[data-theme="dark"] .theme-icon-dark{ display:block; }
 
 .menu-toggle{ display:inline-flex; }
-@media (min-width:960px){ .menu-toggle{ display:none; } }
+@media (min-width:1180px){ .menu-toggle{ display:none; } }
 .menu-toggle .icon-close{ display:none; }
 .menu-toggle.active .icon-menu{ display:none; }
 .menu-toggle.active .icon-close{ display:block; }
@@ -348,6 +351,16 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
 .mobile-nav a{
   font-size: 20px; font-weight:700; color: var(--text);
   padding-block: 10px; border-bottom: 1px solid var(--border);
+}
+.mobile-nav-cta{
+  display:flex !important; align-items:center; justify-content:center;
+  margin-top: var(--space-4);
+  padding: 15px 28px !important;
+  border-radius: var(--radius-full);
+  background-image: var(--brand-gradient);
+  color:#fff !important;
+  font-size:16px !important;
+  border-bottom:none !important;
 }
 .nav-scrim{
   position:fixed; inset:0; background: rgba(5,12,26,.45); z-index:98;
@@ -666,15 +679,20 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
    Packages / Pricing (standalone page)
    ========================================================= */
 .pricing-section{ padding-top: calc(var(--header-h) + 56px); }
+.back-links-row{
+  display:flex; align-items:center; flex-wrap:wrap; gap: 18px;
+  margin-bottom: var(--space-6);
+}
 .back-link{
   display:inline-flex; align-items:center; gap:8px;
-  margin-bottom: var(--space-6);
   font-size:14px; font-weight:700; color: var(--text-muted);
   transition: gap var(--dur-base) var(--ease-out), color var(--dur-base);
 }
+.back-links-row .back-link{ margin-bottom:0; }
 .back-link svg{ width:17px; height:17px; }
 .back-link:hover{ color: var(--teal-600); gap:12px; }
 :root[data-theme="dark"] .back-link:hover{ color: var(--cyan-300); }
+.back-link-sep{ color: var(--border-strong); font-size:14px; }
 .pricing-grid{
   display:grid; gap: var(--space-6);
   grid-template-columns: 1fr;
@@ -995,3 +1013,163 @@ html[dir="rtl"] .marquee-track{ animation-direction: reverse; }
 @media (prefers-reduced-motion: no-preference){
   [data-reveal]{ opacity:0; }
 }
+
+/* =========================================================
+   Sub-page hero header (Services, SaaS, Solutions, Our Work, Pricing, About)
+   ========================================================= */
+.page-hero{ padding-top: calc(var(--header-h) + 56px); padding-bottom: var(--space-3); }
+
+/* =========================================================
+   Status badges
+   ========================================================= */
+.status-badge{
+  display:inline-flex; align-items:center; gap:8px;
+  padding: 7px 16px; border-radius: var(--radius-full);
+  font-size:12.5px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+}
+.status-badge .dot{ width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+.status-badge.testing{ background: rgba(46,196,182,.14); color: var(--teal-600); }
+.status-badge.testing .dot{ background: var(--teal-500); box-shadow:0 0 0 3px rgba(46,196,182,.25); }
+:root[data-theme="dark"] .status-badge.testing{ color: var(--cyan-300); }
+.status-badge.soon{ background: rgba(217,69,95,.1); color: var(--danger); }
+.status-badge.soon .dot{ background: var(--danger); box-shadow:0 0 0 3px rgba(217,69,95,.2); }
+
+/* =========================================================
+   SaaS spotlight section
+   ========================================================= */
+.saas-section{ background: var(--bg-soft); }
+.saas-spotlight{
+  display:grid; gap: var(--space-8);
+  padding: var(--space-7);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 40px 80px -40px hsl(var(--shadow-color) / .35);
+}
+@media (min-width:960px){ .saas-spotlight{ grid-template-columns: 1fr 1fr; align-items:center; padding: var(--space-8); } }
+
+.saas-copy .eyebrow{ margin-bottom: var(--space-4); }
+.saas-product-name{ font-size: clamp(24px, 3vw, 30px); font-weight:800; margin-bottom: 6px; }
+.saas-product-tagline{ font-size:15.5px; font-weight:700; color: var(--teal-600); margin-bottom: var(--space-4); }
+:root[data-theme="dark"] .saas-product-tagline{ color: var(--cyan-300); }
+.saas-copy > p{ color: var(--text-muted); font-size:16px; line-height:1.75; margin-bottom: var(--space-5); }
+
+.saas-areas{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom: var(--space-6); }
+.saas-area-chip{
+  display:inline-flex; align-items:center; gap:8px;
+  padding: 9px 16px; border-radius: var(--radius-full);
+  background: var(--brand-gradient-soft); color: var(--teal-600);
+  font-size:13.5px; font-weight:700;
+}
+:root[data-theme="dark"] .saas-area-chip{ color: var(--cyan-300); }
+.saas-area-chip svg{ width:15px; height:15px; flex-shrink:0; }
+
+.saas-cta-row{ display:flex; flex-wrap:wrap; align-items:center; gap: var(--space-5); }
+.saas-status-note{ font-size:13.5px; color: var(--text-soft); margin-top: var(--space-4); }
+
+/* Product preview placeholder — abstract mockup, not a real screenshot */
+.mockup-frame{
+  position:relative;
+  border-radius: var(--radius-md);
+  background: var(--navy-900);
+  padding: 3px;
+  box-shadow: 0 30px 60px -24px hsl(var(--shadow-color) / .5);
+  overflow:hidden;
+}
+.mockup-bar{
+  display:flex; align-items:center; gap:6px;
+  padding: 10px 14px;
+  background: var(--navy-950);
+}
+.mockup-bar span{ width:9px; height:9px; border-radius:50%; background: rgba(255,255,255,.18); }
+.mockup-body{
+  position:relative;
+  padding: var(--space-6);
+  background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,0));
+  min-height:260px;
+  display:flex; flex-direction:column; gap:14px;
+}
+.mockup-row{ display:flex; gap:14px; }
+.mockup-block{ background: rgba(255,255,255,.08); border-radius:8px; }
+.mockup-block.tall{ height:150px; }
+.mockup-block.w-30{ width:30%; }
+.mockup-block.w-70{ flex:1; }
+.mockup-block.line{ height:14px; }
+.mockup-block.w-full{ width:100%; }
+.mockup-block.w-60{ width:60%; }
+.mockup-block.w-40{ width:40%; }
+.mockup-overlay{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  background: rgba(5,12,26,.72);
+  backdrop-filter: blur(2px);
+  color:#fff; font-weight:700; font-size:14px; letter-spacing:.02em;
+  padding: var(--space-5);
+}
+
+/* =========================================================
+   Solutions grid
+   ========================================================= */
+.solutions-grid{ display:grid; gap: var(--space-5); grid-template-columns: 1fr; }
+@media (min-width:640px){ .solutions-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (min-width:1080px){ .solutions-grid{ grid-template-columns: repeat(4,1fr); } }
+.solution-card{
+  padding: var(--space-6);
+  background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-lg);
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base);
+}
+.solution-card:hover{ transform: translateY(-6px); box-shadow: 0 24px 48px -28px hsl(var(--shadow-color) / .4); }
+.solution-card .ic{
+  width:48px; height:48px; border-radius: var(--radius-sm);
+  display:flex; align-items:center; justify-content:center;
+  background: var(--brand-gradient-soft); color: var(--teal-600);
+  margin-bottom: var(--space-4);
+}
+:root[data-theme="dark"] .solution-card .ic{ color: var(--cyan-300); }
+.solution-card .ic svg{ width:22px; height:22px; }
+.solution-card h3{ font-size:17px; font-weight:800; margin-bottom:8px; }
+.solution-card p{ font-size:14px; color: var(--text-muted); line-height:1.7; }
+
+/* =========================================================
+   Our Work — filters + empty state
+   ========================================================= */
+.filter-tabs{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom: var(--space-6); }
+.filter-tab{
+  padding: 10px 20px; border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-strong); background: var(--surface);
+  font-weight:700; font-size:14px; color: var(--text-muted);
+  transition: all var(--dur-base) var(--ease-out);
+}
+.filter-tab:hover{ border-color: var(--teal-500); color: var(--teal-600); }
+:root[data-theme="dark"] .filter-tab:hover{ color: var(--cyan-300); }
+.filter-tab.active{ background: var(--brand-gradient); color:#fff; border-color:transparent; }
+
+.work-empty{
+  display:none; flex-direction:column; align-items:center; gap: var(--space-3);
+  text-align:center; padding: var(--space-8) var(--space-5);
+  color: var(--text-soft); font-size:15px;
+}
+
+/* =========================================================
+   Client trust strip
+   ========================================================= */
+.trust-logos{
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+  gap: var(--space-7);
+}
+.trust-logos img{
+  height:34px; width:auto; object-fit:contain;
+  filter: grayscale(1); opacity:.55;
+  transition: all var(--dur-base) var(--ease-out);
+}
+.trust-logos img:hover{ filter:none; opacity:1; transform: translateY(-2px); }
+
+/* =========================================================
+   Pricing note / cross-link
+   ========================================================= */
+.pricing-crosslink{
+  text-align:center; margin-top: var(--space-6);
+  font-size:14.5px; color: var(--text-muted);
+}
+.pricing-crosslink a{ color: var(--teal-600); font-weight:700; }
+:root[data-theme="dark"] .pricing-crosslink a{ color: var(--cyan-300); }

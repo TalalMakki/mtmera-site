@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  var t = localStorage.getItem('mtmera-theme');
+  if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MTMERA Business — Business Management &amp; Accounting SaaS</title>
+<meta name="description" content="MTMERA Business is a multi-tenant SaaS for managing sales, purchases, inventory, customer and supplier accounts, and reporting — built by MTMERA, currently in private testing.">
+<meta name="mtmera:title-ar" content="MTMERA Business — نظام إدارة أعمال ومحاسبة">
+<meta name="mtmera:desc-ar" content="MTMERA Business نظام SaaS لإدارة المبيعات والمشتريات والمخزون وحسابات العملاء والموردين والتقارير — من تطوير MTMERA، وقيد الاختبار الخاص حاليًا.">
+<link rel="canonical" href="https://mtmera.com/mtmera-business.html">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-lang="en">Skip to content</a>
+<a class="skip-link" href="#main" data-lang="ar">تخطَّ إلى المحتوى</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="MTMERA home">
+      <img class="brand-mark" src="assets/logo-icon.png" alt="MTMERA logo">
+      <span class="brand-word">
+        <b>MTM<em>ERA</em></b>
+        <span data-lang="en">Software · Cloud · Hosting</span>
+        <span data-lang="ar">سوفت وير · سحابة · استضافة</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="services.html"><span data-lang="en">Services</span><span data-lang="ar">خدماتنا</span></a>
+      <a href="saas.html"><span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span></a>
+      <a href="solutions.html"><span data-lang="en">Solutions</span><span data-lang="ar">الحلول</span></a>
+      <a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a>
+      <a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a>
+      <a href="about.html"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a>
+      <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="index.html#contact" class="btn btn-primary nav-cta">
+        <span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span>
+      </a>
+      <button class="lang-btn" id="langToggle" type="button" aria-label="Change language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span data-lang="en">AR</span>
+        <span data-lang="ar">EN</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-scrim" id="navScrim"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="services.html"><span data-lang="en">Services</span><span data-lang="ar">خدماتنا</span></a>
+  <a href="saas.html"><span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span></a>
+  <a href="solutions.html"><span data-lang="en">Solutions</span><span data-lang="ar">الحلول</span></a>
+  <a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a>
+  <a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a>
+  <a href="about.html"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a>
+  <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a>
+  <a href="index.html#contact" class="mobile-nav-cta"><span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span></a>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="section-pad page-hero">
+  <div class="container">
+    <div class="back-links-row" data-reveal>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-lang="en">Back to Home</span>
+        <span data-lang="ar">الرجوع للرئيسية</span>
+      </a>
+      <span class="back-link-sep">·</span>
+      <a href="saas.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-lang="en">Back to MTMERA SaaS</span>
+        <span data-lang="ar">الرجوع لـ MTMERA SaaS</span>
+      </a>
+    </div>
+
+    <div class="section-head center">
+      <div class="status-badge testing" data-reveal style="margin-bottom:var(--space-4)">
+        <span class="dot"></span>
+        <span data-lang="en">In Private Testing — Not Yet Publicly Available</span>
+        <span data-lang="ar">قيد الاختبار الخاص — غير متاح للعموم بعد</span>
+      </div>
+      <h1 class="section-title" data-reveal>MTMERA Business</h1>
+      <p class="section-desc" data-reveal style="margin-inline:auto">
+        <span data-lang="en">A business management and accounting platform for small and medium businesses — sales, purchases, inventory, customer &amp; supplier accounts and reporting, in one system. Built by MTMERA, and currently being tested internally before wider release.</span>
+        <span data-lang="ar">منصة إدارة أعمال ومحاسبة للشركات الصغيرة والمتوسطة — مبيعات، مشتريات، مخزون، حسابات عملاء وموردين، وتقارير، في نظام واحد. من تطوير MTMERA، وقيد الاختبار الداخلي حاليًا قبل الإطلاق الأوسع.</span>
+      </p>
+      <div class="hero-cta" style="justify-content:center" data-reveal>
+        <button type="button" class="btn btn-primary btn-lg" id="earlyAccessBtn">
+          <span data-lang="en">Request Early Access</span><span data-lang="ar">اطلب وصول مبكر</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.3A10 10 0 1 0 12 2z"/><path d="M9 8.4a.9.9 0 0 1 .9-.9h.8a.9.9 0 0 1 .9.7l.3 1.3a.9.9 0 0 1-.25.85l-.66.65a6.4 6.4 0 0 0 2.9 2.9l.65-.66a.9.9 0 0 1 .85-.25l1.3.3a.9.9 0 0 1 .7.9v.8a.9.9 0 0 1-.9.9A7.6 7.6 0 0 1 9 8.4z"/></svg>
+        </button>
+        <a href="pricing.html" class="btn btn-ghost btn-lg">
+          <span data-lang="en">See Pricing</span><span data-lang="ar">عرض الأسعار</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREVIEW ============ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="mockup-frame" data-reveal style="max-width:900px;margin-inline:auto">
+      <div class="mockup-bar"><span></span><span></span><span></span></div>
+      <div class="mockup-body" style="min-height:320px">
+        <div class="mockup-row">
+          <div class="mockup-block w-30 tall"></div>
+          <div class="mockup-block w-70" style="display:flex;flex-direction:column;gap:10px">
+            <div class="mockup-block line w-full"></div>
+            <div class="mockup-block line w-60"></div>
+            <div class="mockup-block line w-40" style="margin-top:8px;height:80px"></div>
+          </div>
+        </div>
+        <div class="mockup-row">
+          <div class="mockup-block line w-full" style="height:34px"></div>
+        </div>
+        <div class="mockup-row">
+          <div class="mockup-block line w-full" style="height:34px"></div>
+        </div>
+        <div class="mockup-overlay">
+          <span data-lang="en">Product preview — coming soon</span>
+          <span data-lang="ar">معاينة المنتج — قريبًا</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE AREAS ============ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow" data-reveal><span class="dot"></span>
+        <span data-lang="en">WHAT'S IN THE SYSTEM TODAY</span>
+        <span data-lang="ar">ماذا يتضمن النظام اليوم</span>
+      </div>
+      <h2 class="section-title" data-reveal>
+        <span data-lang="en">Everything a Growing Business Needs to Track</span>
+        <span data-lang="ar">كل ما تحتاج شركتك النامية لتتبعه</span>
+      </h2>
+      <p class="section-desc" data-reveal style="margin-inline:auto">
+        <span data-lang="en">These are the modules currently built and being tested. Nothing below is a future promise — it's what the system does today.</span>
+        <span data-lang="ar">هذه هي الوحدات المبنية حاليًا وقيد الاختبار. لا شيء أدناه وعد مستقبلي — بل ما يقوم به النظام فعليًا اليوم.</span>
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3><span data-lang="en">Sales</span><span data-lang="ar">المبيعات</span></h3>
+        <p><span data-lang="en">Sales invoices, returns and customer statements — with stock and customer balances updated automatically.</span>
+        <span data-lang="ar">فواتير بيع، مرتجعات، وكشوف حساب للعملاء — مع تحديث تلقائي للمخزون وأرصدة العملاء.</span></p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+        <h3><span data-lang="en">Purchases</span><span data-lang="ar">المشتريات</span></h3>
+        <p><span data-lang="en">Purchase invoices, returns and supplier statements, mirroring the sales workflow for the buying side.</span>
+        <span data-lang="ar">فواتير شراء، مرتجعات، وكشوف حساب للموردين، بنفس منطق عمل المبيعات على جانب الشراء.</span></p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <h3><span data-lang="en">Inventory</span><span data-lang="ar">المخزون</span></h3>
+        <p><span data-lang="en">Products, categories, units and warehouses, with stock adjustments, transfers, stocktakes and a full movements ledger.</span>
+        <span data-lang="ar">منتجات وتصنيفات ووحدات ومخازن، مع تسويات مخزون، تحويلات، جرد، وسجل حركات كامل.</span></p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3><span data-lang="en">Customers &amp; Suppliers</span><span data-lang="ar">العملاء والموردين</span></h3>
+        <p><span data-lang="en">Customer and supplier profiles with running balances, kept in sync with every sale, purchase and return.</span>
+        <span data-lang="ar">ملفات عملاء وموردين مع أرصدة جارية، تتحدث تلقائيًا مع كل عملية بيع أو شراء أو مرتجع.</span></p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg></div>
+        <h3><span data-lang="en">Reports</span><span data-lang="ar">التقارير</span></h3>
+        <p><span data-lang="en">Sales, purchases, inventory valuation, and customer/supplier statement reports, exportable to CSV and Excel.</span>
+        <span data-lang="ar">تقارير مبيعات، مشتريات، تقييم مخزون، وكشوف حساب عملاء وموردين، قابلة للتصدير إلى CSV وExcel.</span></p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3><span data-lang="en">Team, Roles &amp; Audit</span><span data-lang="ar">الفريق والصلاحيات والتدقيق</span></h3>
+        <p><span data-lang="en">Multiple user accounts, role-based permissions, and an audit log of who did what and when.</span>
+        <span data-lang="ar">حسابات مستخدمين متعددة، صلاحيات حسب الدور، وسجل تدقيق يوضح من قام بماذا ومتى.</span></p>
+      </div>
+    </div>
+
+    <p class="section-desc" data-reveal style="margin-top:var(--space-6);text-align:center;margin-inline:auto;max-width:700px">
+      <span data-lang="en">The interface is fully bilingual — Arabic and English, with right-to-left layout support.</span>
+      <span data-lang="ar">الواجهة ثنائية اللغة بالكامل — عربي وإنجليزي، مع دعم كامل للتخطيط من اليمين إلى اليسار.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="cta-banner" data-reveal>
+      <div class="cta-blob a"></div>
+      <div class="cta-blob b"></div>
+      <h2><span data-lang="en">Want to Be Among the First to Try It?</span><span data-lang="ar">حابب تكون من أول من يجربه؟</span></h2>
+      <p><span data-lang="en">MTMERA Business is not publicly launched yet. Reach out and we'll keep you posted as testing progresses.</span><span data-lang="ar">MTMERA Business لسه ما أُطلق للعموم. تواصل معنا وهنبقى نطلعك أول بأول على تقدم الاختبار.</span></p>
+      <div class="hero-cta">
+        <button type="button" class="btn btn-primary btn-lg" id="earlyAccessBtn2">
+          <span data-lang="en">Request Early Access</span><span data-lang="ar">اطلب وصول مبكر</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.3A10 10 0 1 0 12 2z"/><path d="M9 8.4a.9.9 0 0 1 .9-.9h.8a.9.9 0 0 1 .9.7l.3 1.3a.9.9 0 0 1-.25.85l-.66.65a6.4 6.4 0 0 0 2.9 2.9l.65-.66a.9.9 0 0 1 .85-.25l1.3.3a.9.9 0 0 1 .7.9v.8a.9.9 0 0 1-.9.9A7.6 7.6 0 0 1 9 8.4z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" aria-label="MTMERA">
+        <img class="brand-mark" src="assets/logo-icon.png" alt="MTMERA">
+        <span class="brand-word"><b style="color:#fff">MTM<em>ERA</em></b></span>
+      </a>
+      <p><span data-lang="en">Software, digital solutions and SaaS products engineered for reliability, security and growth.</span>
+      <span data-lang="ar">برمجيات وحلول رقمية ومنتجات SaaS مصممة لتكون موثوقة وآمنة وقابلة للنمو.</span></p>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Company</span><span data-lang="ar">الشركة</span></h5>
+      <ul>
+        <li><a href="about.html"><span data-lang="en">About Us</span><span data-lang="ar">من نحن</span></a></li>
+        <li><a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a></li>
+        <li><a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a></li>
+        <li><a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Services &amp; SaaS</span><span data-lang="ar">الخدمات و SaaS</span></h5>
+      <ul>
+        <li><a href="services.html"><span data-lang="en">All Services</span><span data-lang="ar">كل الخدمات</span></a></li>
+        <li><a href="saas.html"><span data-lang="en">MTMERA SaaS</span><span data-lang="ar">MTMERA SaaS</span></a></li>
+        <li><a href="mtmera-business.html">MTMERA Business</a></li>
+        <li><a href="pricing.html"><span data-lang="en">SaaS Pricing</span><span data-lang="ar">أسعار SaaS</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Contact</span><span data-lang="ar">التواصل</span></h5>
+      <ul>
+        <li><a href="mailto:info@mtmera.com">info@mtmera.com</a></li>
+        <li><a href="tel:+201142006128" dir="ltr">+20 114 200 6128</a></li>
+        <li><a href="https://wa.me/201142006128" target="_blank" rel="noopener"><span data-lang="en">WhatsApp</span><span data-lang="ar">واتساب</span></a></li>
+        <li><a href="index.html#contact"><span data-lang="en">Send a Message</span><span data-lang="ar">أرسل رسالة</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>
+      <span data-lang="en">© 2026 MTMERA. All rights reserved.</span>
+      <span data-lang="ar">© 2026 MTMERA. جميع الحقوق محفوظة.</span>
+    </span>
+    <div class="footer-social">
+      <a href="https://wa.me/201142006128" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.3A10 10 0 1 0 12 2z"/><path d="M9 8.4a.9.9 0 0 1 .9-.9h.8a.9.9 0 0 1 .9.7l.3 1.3a.9.9 0 0 1-.25.85l-.66.65a6.4 6.4 0 0 0 2.9 2.9l.65-.66a.9.9 0 0 1 .85-.25l1.3.3a.9.9 0 0 1 .7.9v.8a.9.9 0 0 1-.9.9A7.6 7.6 0 0 1 9 8.4z"/></svg></a>
+      <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  function isAr(){ return document.documentElement.getAttribute('lang') === 'ar'; }
+  function requestAccess(){
+    var text = isAr()
+      ? 'مرحبًا، حابب أطلب وصول مبكر لتجربة MTMERA Business.'
+      : "Hi, I'd like to request early access to try MTMERA Business.";
+    window.open('https://wa.me/201142006128?text=' + encodeURIComponent(text), '_blank', 'noopener');
+  }
+  var b1 = document.getElementById('earlyAccessBtn');
+  var b2 = document.getElementById('earlyAccessBtn2');
+  if (b1) b1.addEventListener('click', requestAccess);
+  if (b2) b2.addEventListener('click', requestAccess);
+})();
+</script>
+</body>
+</html>

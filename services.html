@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  var t = localStorage.getItem('mtmera-theme');
+  if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MTMERA — Software, Web, E-Commerce &amp; Cloud Services</title>
+<meta name="description" content="MTMERA's core services: custom software development, website design, e-commerce stores, cloud solutions, hosting, AI solutions and technical support.">
+<meta name="mtmera:title-ar" content="MTMERA — خدمات البرمجيات والمواقع والمتاجر والسحابة">
+<meta name="mtmera:desc-ar" content="خدمات MTMERA الأساسية: تطوير برمجيات مخصصة، تصميم مواقع، متاجر إلكترونية، حلول سحابية، استضافة، حلول ذكاء اصطناعي ودعم فني.">
+<link rel="canonical" href="https://mtmera.com/services.html">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-lang="en">Skip to content</a>
+<a class="skip-link" href="#main" data-lang="ar">تخطَّ إلى المحتوى</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="MTMERA home">
+      <img class="brand-mark" src="assets/logo-icon.png" alt="MTMERA logo">
+      <span class="brand-word">
+        <b>MTM<em>ERA</em></b>
+        <span data-lang="en">Software · Cloud · Hosting</span>
+        <span data-lang="ar">سوفت وير · سحابة · استضافة</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="services.html"><span data-lang="en">Services</span><span data-lang="ar">خدماتنا</span></a>
+      <a href="saas.html"><span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span></a>
+      <a href="solutions.html"><span data-lang="en">Solutions</span><span data-lang="ar">الحلول</span></a>
+      <a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a>
+      <a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a>
+      <a href="about.html"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a>
+      <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="index.html#contact" class="btn btn-primary nav-cta">
+        <span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span>
+      </a>
+      <button class="lang-btn" id="langToggle" type="button" aria-label="Change language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span data-lang="en">AR</span>
+        <span data-lang="ar">EN</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-scrim" id="navScrim"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="services.html"><span data-lang="en">Services</span><span data-lang="ar">خدماتنا</span></a>
+  <a href="saas.html"><span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span></a>
+  <a href="solutions.html"><span data-lang="en">Solutions</span><span data-lang="ar">الحلول</span></a>
+  <a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a>
+  <a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a>
+  <a href="about.html"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a>
+  <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a>
+  <a href="index.html#contact" class="mobile-nav-cta"><span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span></a>
+</nav>
+
+<main id="main">
+
+<!-- ============ SERVICES HERO ============ -->
+<section class="section-pad page-hero">
+  <div class="container">
+    <div class="back-links-row" data-reveal>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-lang="en">Back to Home</span>
+        <span data-lang="ar">الرجوع للرئيسية</span>
+      </a>
+    </div>
+    <div class="section-head center">
+      <div class="eyebrow" data-reveal><span class="dot"></span>
+        <span data-lang="en">WHAT WE DO</span>
+        <span data-lang="ar">ماذا نقدم</span>
+      </div>
+      <h1 class="section-title" data-reveal>
+        <span data-lang="en">Software, Cloud and Hosting — Under One Roof</span>
+        <span data-lang="ar">برمجيات وسحابة واستضافة — تحت سقف واحد</span>
+      </h1>
+      <p class="section-desc" data-reveal style="margin-inline:auto">
+        <span data-lang="en">Every service MTMERA offers is designed to work together, so your systems stay consistent from code to cloud. This is our core business — the foundation everything else, including our SaaS products, is built on.</span>
+        <span data-lang="ar">كل خدمة تقدمها MTMERA مصممة لتعمل بتكامل، لتبقى أنظمتك متسقة من الكود إلى السحابة. هذا هو عملنا الأساسي — الأساس الذي تُبنى فوقه بقية أعمالنا، بما فيها منتجات SaaS.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES GRID ============ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="services-grid">
+      <a class="service-card" data-reveal id="software-development" href="coming-soon.html?service=software-development">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3><span data-lang="en">Custom Software Development</span><span data-lang="ar">تطوير البرمجيات المخصصة</span></h3>
+        <p><span data-lang="en">Web and mobile applications engineered around your workflows, from first prototype to production.</span>
+        <span data-lang="ar">تطبيقات ويب وموبايل مصممة خصيصًا حول سير عملك، من النموذج الأولي حتى الإطلاق.</span></p>
+        <div class="tag-row">
+          <span data-lang="en">Web · Mobile · API</span>
+          <span data-lang="ar">ويب · موبايل · واجهات برمجية</span>
+        </div>
+      <span class="service-link">
+        <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+      </a>
+
+      <a class="service-card" data-reveal id="web-design" href="packages.html">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3><span data-lang="en">Website Design &amp; Professional Hosting</span><span data-lang="ar">إنشاء المواقع واستضافة احترافية</span></h3>
+        <p><span data-lang="en">We design and build professional websites, then host them on fast, secure infrastructure with the best available capabilities — a complete turnkey package.</span>
+        <span data-lang="ar">نصمم ونبني مواقع احترافية على الإنترنت، ونستضيفها على بنية سريعة وآمنة بأفضل الإمكانيات — باقة متكاملة من الفكرة حتى الإطلاق.</span></p>
+        <div class="tag-row">
+          <span data-lang="en">Design · Build · Host</span>
+          <span data-lang="ar">تصميم · بناء · استضافة</span>
+        </div>
+      <span class="service-link">
+        <span data-lang="en">View Packages</span><span data-lang="ar">عرض الباقات</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+      </a>
+
+      <a class="service-card" data-reveal id="ecommerce" href="coming-soon.html?service=ecommerce">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+        <h3><span data-lang="en">Professional E-Commerce Stores</span><span data-lang="ar">متاجر إلكترونية احترافية</span></h3>
+        <p><span data-lang="en">Full-featured online stores with secure checkout, product and inventory management, and payment gateway integration — built to convert visitors into customers.</span>
+        <span data-lang="ar">متاجر إلكترونية متكاملة بخاصية دفع آمنة، وإدارة للمنتجات والمخزون، وربط ببوابات الدفع — مصممة لتحويل الزوار إلى عملاء.</span></p>
+        <div class="tag-row">
+          <span data-lang="en">Storefronts · Payments · Inventory</span>
+          <span data-lang="ar">متاجر · مدفوعات · مخزون</span>
+        </div>
+      <span class="service-link">
+        <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+      </a>
+
+      <a class="service-card" data-reveal id="cloud-hosting" href="coming-soon.html?service=cloud-solutions">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <h3><span data-lang="en">Cloud Solutions &amp; Migration</span><span data-lang="ar">الحلول والترحيل السحابي</span></h3>
+        <p><span data-lang="en">Move your systems to the cloud with a clear migration plan, minimal downtime, and long-term scalability.</span>
+        <span data-lang="ar">انقل أنظمتك إلى السحابة بخطة ترحيل واضحة، وأقل توقف ممكن، وقابلية للتوسع مستقبلًا.</span></p>
+        <div class="tag-row">
+          <span data-lang="en">Migration · Architecture</span>
+          <span data-lang="ar">ترحيل · بنية سحابية</span>
+        </div>
+      <span class="service-link">
+        <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+      </a>
+
+      <a class="service-card" data-reveal href="coming-soon.html?service=web-hosting">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+        <h3><span data-lang="en">Web &amp; App Hosting</span><span data-lang="ar">استضافة المواقع والتطبيقات</span></h3>
+        <p><span data-lang="en">High-availability hosting with automated backups, SSL certificates and performance monitoring built in.</span>
+        <span data-lang="ar">استضافة عالية التوفر مع نسخ احتياطي تلقائي، وشهادات SSL، ومراقبة أداء مدمجة.</span></p>
+        <div class="tag-row">
+          <span data-lang="en">SSD · SSL · Backups</span>
+          <span data-lang="ar">تخزين سريع · SSL · نسخ احتياطي</span>
+        </div>
+      <span class="service-link">
+        <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+      </a>
+
+      <a class="service-card" data-reveal href="coming-soon.html?service=managed-infrastructure">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+        <h3><span data-lang="en">Managed Cloud Infrastructure</span><span data-lang="ar">إدارة البنية التحتية السحابية</span></h3>
+        <p><span data-lang="en">We monitor, secure and scale your cloud environment so it stays fast and resilient as you grow.</span>
+        <span data-lang="ar">نراقب ونؤمّن وننمّي بيئتك السحابية لتبقى سريعة ومرنة مع نمو أعمالك.</span></p>
+        <div class="tag-row">
+          <span data-lang="en">Monitoring · Scaling</span>
+          <span data-lang="ar">مراقبة · توسعة</span>
+        </div>
+      <span class="service-link">
+        <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+      </a>
+
+      <a class="service-card" data-reveal id="ai-solutions" href="coming-soon.html?service=ai-solutions">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg></div>
+        <h3><span data-lang="en">AI Solutions</span><span data-lang="ar">حلول الذكاء الاصطناعي</span></h3>
+        <p><span data-lang="en">Practical AI features integrated into the software we build — chatbots, workflow automation, and smarter reporting that save your team time.</span>
+        <span data-lang="ar">نضيف قدرات ذكاء اصطناعي عملية إلى البرمجيات التي نبنيها: شات بوت، أتمتة العمليات، وتقارير أذكى توفر وقت فريقك.</span></p>
+        <div class="tag-row">
+          <span data-lang="en">Chatbots · Automation · Insights</span>
+          <span data-lang="ar">شات بوت · أتمتة · تحليلات</span>
+        </div>
+      <span class="service-link">
+        <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+      </a>
+
+      <a class="service-card" data-reveal href="coming-soon.html?service=security">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-11.8V5l-8-3-8 3v5.2C4 17.5 12 22 12 22z"/></svg></div>
+        <h3><span data-lang="en">Security &amp; Compliance</span><span data-lang="ar">الأمان والامتثال</span></h3>
+        <p><span data-lang="en">Hardened servers, encrypted data and proactive monitoring to keep your systems protected.</span>
+        <span data-lang="ar">خوادم محصّنة، وبيانات مشفّرة، ومراقبة استباقية للحفاظ على حماية أنظمتك.</span></p>
+        <div class="tag-row">
+          <span data-lang="en">Encryption · Monitoring</span>
+          <span data-lang="ar">تشفير · مراقبة</span>
+        </div>
+      <span class="service-link">
+        <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+      </a>
+
+      <a class="service-card" data-reveal id="support" href="coming-soon.html?service=support">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg></div>
+        <h3><span data-lang="en">Technical Support &amp; Maintenance</span><span data-lang="ar">الدعم الفني والصيانة</span></h3>
+        <p><span data-lang="en">Round-the-clock support and proactive maintenance to keep every system running smoothly.</span>
+        <span data-lang="ar">دعم فني على مدار الساعة وصيانة استباقية لإبقاء جميع الأنظمة تعمل بسلاسة.</span></p>
+        <div class="tag-row">
+          <span data-lang="en">24 / 7 · Proactive</span>
+          <span data-lang="ar">على مدار الساعة · استباقي</span>
+        </div>
+      <span class="service-link">
+        <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAAS CROSS-LINK ============ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="cta-banner" data-reveal>
+      <div class="cta-blob a"></div>
+      <div class="cta-blob b"></div>
+      <h2><span data-lang="en">Looking for MTMERA's SaaS Products?</span><span data-lang="ar">بتدور على منتجات MTMERA SaaS؟</span></h2>
+      <p><span data-lang="en">Alongside these services, MTMERA also builds and owns its own software products — starting with MTMERA Business.</span><span data-lang="ar">إلى جانب هذه الخدمات، تبني MTMERA أيضًا منتجاتها البرمجية الخاصة — بدءًا من MTMERA Business.</span></p>
+      <div class="hero-cta">
+        <a href="saas.html" class="btn btn-primary btn-lg">
+          <span data-lang="en">Explore MTMERA SaaS</span><span data-lang="ar">استكشف MTMERA SaaS</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" aria-label="MTMERA">
+        <img class="brand-mark" src="assets/logo-icon.png" alt="MTMERA">
+        <span class="brand-word"><b style="color:#fff">MTM<em>ERA</em></b></span>
+      </a>
+      <p><span data-lang="en">Software, digital solutions and SaaS products engineered for reliability, security and growth.</span>
+      <span data-lang="ar">برمجيات وحلول رقمية ومنتجات SaaS مصممة لتكون موثوقة وآمنة وقابلة للنمو.</span></p>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Company</span><span data-lang="ar">الشركة</span></h5>
+      <ul>
+        <li><a href="about.html"><span data-lang="en">About Us</span><span data-lang="ar">من نحن</span></a></li>
+        <li><a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a></li>
+        <li><a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a></li>
+        <li><a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Services &amp; SaaS</span><span data-lang="ar">الخدمات و SaaS</span></h5>
+      <ul>
+        <li><a href="services.html#software-development"><span data-lang="en">Software Development</span><span data-lang="ar">تطوير البرمجيات</span></a></li>
+        <li><a href="services.html#web-design"><span data-lang="en">Website Design &amp; Hosting</span><span data-lang="ar">إنشاء المواقع والاستضافة</span></a></li>
+        <li><a href="services.html#ecommerce"><span data-lang="en">E-Commerce Stores</span><span data-lang="ar">المتاجر الإلكترونية</span></a></li>
+        <li><a href="services.html#cloud-hosting"><span data-lang="en">Cloud &amp; Hosting</span><span data-lang="ar">السحابة والاستضافة</span></a></li>
+        <li><a href="services.html#ai-solutions"><span data-lang="en">AI Solutions</span><span data-lang="ar">حلول الذكاء الاصطناعي</span></a></li>
+        <li><a href="saas.html"><span data-lang="en">MTMERA SaaS</span><span data-lang="ar">MTMERA SaaS</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Contact</span><span data-lang="ar">التواصل</span></h5>
+      <ul>
+        <li><a href="mailto:info@mtmera.com">info@mtmera.com</a></li>
+        <li><a href="tel:+201142006128" dir="ltr">+20 114 200 6128</a></li>
+        <li><a href="https://wa.me/201142006128" target="_blank" rel="noopener"><span data-lang="en">WhatsApp</span><span data-lang="ar">واتساب</span></a></li>
+        <li><a href="index.html#contact"><span data-lang="en">Send a Message</span><span data-lang="ar">أرسل رسالة</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>
+      <span data-lang="en">© 2026 MTMERA. All rights reserved.</span>
+      <span data-lang="ar">© 2026 MTMERA. جميع الحقوق محفوظة.</span>
+    </span>
+    <div class="footer-social">
+      <a href="https://wa.me/201142006128" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.3A10 10 0 1 0 12 2z"/><path d="M9 8.4a.9.9 0 0 1 .9-.9h.8a.9.9 0 0 1 .9.7l.3 1.3a.9.9 0 0 1-.25.85l-.66.65a6.4 6.4 0 0 0 2.9 2.9l.65-.66a.9.9 0 0 1 .85-.25l1.3.3a.9.9 0 0 1 .7.9v.8a.9.9 0 0 1-.9.9A7.6 7.6 0 0 1 9 8.4z"/></svg></a>
+      <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

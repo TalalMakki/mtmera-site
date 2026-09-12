@@ -18,21 +18,26 @@
 
   /* ---------------- Language toggle ---------------- */
   var langToggle = document.getElementById('langToggle');
-  var metaTitle = {
-    en: 'MTMERA — Software · Cloud · Hosting',
-    ar: 'MTMERA — سوفت وير · سحابة · استضافة'
-  };
-  var metaDesc = {
-    en: 'MTMERA — software development, cloud solutions and hosting services.',
-    ar: 'MTMERA — تطوير البرمجيات، الحلول السحابية، وخدمات الاستضافة.'
-  };
+  var titleArTag = document.querySelector('meta[name="mtmera:title-ar"]');
+  var descArTag = document.querySelector('meta[name="mtmera:desc-ar"]');
+  var titleAr = titleArTag ? titleArTag.getAttribute('content') : null;
+  var descAr = descArTag ? descArTag.getAttribute('content') : null;
+  var savedTitleEn = null;
+  var savedDescEn = null;
 
   function setLang(lang) {
     html.setAttribute('lang', lang);
     html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-    document.title = metaTitle[lang];
     var descTag = document.querySelector('meta[name="description"]');
-    if (descTag) descTag.setAttribute('content', metaDesc[lang]);
+    if (lang === 'ar') {
+      if (savedTitleEn === null) savedTitleEn = document.title;
+      if (savedDescEn === null) savedDescEn = descTag ? descTag.getAttribute('content') : '';
+      document.title = titleAr !== null ? titleAr : savedTitleEn;
+      if (descTag && descAr !== null) descTag.setAttribute('content', descAr);
+    } else {
+      if (savedTitleEn !== null) document.title = savedTitleEn;
+      if (descTag && savedDescEn !== null) descTag.setAttribute('content', savedDescEn);
+    }
     localStorage.setItem('mtmera-lang', lang);
   }
 
@@ -308,13 +313,17 @@
     });
   }
 
-  /* ---------------- Package "Subscribe" buttons: straight to WhatsApp ---------------- */
+  /* ---------------- Package / plan buttons: straight to WhatsApp ---------------- */
   document.querySelectorAll('.price-cta[data-package-en]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var label = isAr() ? btn.getAttribute('data-package-ar') : btn.getAttribute('data-package-en');
-      var text = isAr()
+      var subscribeText = isAr()
         ? 'مرحبًا، حابب أشترك في ' + label + '.'
         : 'Hi, I\'d like to subscribe to the ' + label + '.';
+      var inquireText = isAr()
+        ? 'مرحبًا، حابب أعرف أكتر عن ' + label + '.'
+        : 'Hi, I\'d like to know more about the ' + label + '.';
+      var text = btn.hasAttribute('data-inquire') ? inquireText : subscribeText;
       window.open('https://wa.me/201142006128?text=' + encodeURIComponent(text), '_blank', 'noopener');
     });
   });
