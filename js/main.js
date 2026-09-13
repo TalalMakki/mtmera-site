@@ -204,7 +204,7 @@
         { opacity: 0, y: 26 },
         {
           opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
-          scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none reverse' }
+          scrollTrigger: { trigger: el, start: 'top 92%', once: true }
         }
       );
     });
@@ -236,6 +236,10 @@
     }
 
     gsap.fromTo('.hero h1', { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', delay: 0.1 });
+
+    /* Recalculate trigger positions once images/fonts finish loading and
+       shift the layout, so reveals fire at the right scroll position. */
+    window.addEventListener('load', function () { ScrollTrigger.refresh(); });
   } else {
     document.querySelectorAll('[data-reveal]').forEach(function (el) {
       el.style.opacity = '1';

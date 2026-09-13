@@ -375,6 +375,7 @@
         if (show) visible++;
       });
       emptyState.style.display = visible === 0 ? 'flex' : 'none';
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
     });
   });
 })();
