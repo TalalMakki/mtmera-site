@@ -1088,6 +1088,17 @@ html[dir="rtl"] .marquee-track{ animation-direction: reverse; }
 :root[data-theme="dark"] .status-badge.testing{ color: var(--cyan-300); }
 .status-badge.soon{ background: rgba(217,69,95,.1); color: var(--danger); }
 .status-badge.soon .dot{ background: var(--danger); box-shadow:0 0 0 3px rgba(217,69,95,.2); }
+.status-badge.live{ background: rgba(26,163,124,.14); color: var(--success); }
+.status-badge.live .dot{ background: var(--success); box-shadow:0 0 0 3px rgba(26,163,124,.22); }
+
+.login-link{
+  font-weight:700; font-size:14.5px; color: var(--text-muted);
+  transition: color var(--dur-fast);
+  display:none;
+}
+.login-link:hover{ color: var(--teal-600); }
+:root[data-theme="dark"] .login-link:hover{ color: var(--cyan-300); }
+@media (min-width:1180px){ .login-link{ display:inline-flex; align-items:center; } }
 
 /* =========================================================
    SaaS spotlight section
