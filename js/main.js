@@ -331,4 +331,19 @@
       window.open('https://wa.me/201142006128?text=' + encodeURIComponent(text), '_blank', 'noopener');
     });
   });
+
+  /* ---------------- Pricing: Monthly / Annual toggle ---------------- */
+  var priceToggle = document.querySelector('.price-toggle');
+  var pricingGrid = document.getElementById('pricingGrid');
+  if (priceToggle && pricingGrid) {
+    priceToggle.querySelectorAll('.price-toggle-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        priceToggle.querySelectorAll('.price-toggle-btn').forEach(function (b) {
+          b.classList.remove('is-active');
+        });
+        btn.classList.add('is-active');
+        pricingGrid.classList.toggle('is-yearly', btn.getAttribute('data-cycle') === 'yearly');
+      });
+    });
+  }
 })();

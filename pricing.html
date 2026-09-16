@@ -11,9 +11,9 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MTMERA Business Pricing — Starter, Business &amp; Professional</title>
-<meta name="description" content="Pricing plans for MTMERA Business — Starter, Business and Professional. Final pricing is being finalized ahead of public launch.">
-<meta name="mtmera:title-ar" content="أسعار MTMERA Business — Starter وBusiness وProfessional">
-<meta name="mtmera:desc-ar" content="خطط أسعار MTMERA Business — Starter وBusiness وProfessional. السعر النهائي قيد التحديد قبل الإطلاق للعموم.">
+<meta name="description" content="Pricing plans for MTMERA Business — Starter, Business and Professional, starting at 299 EGP/month. Save 2 months with annual billing.">
+<meta name="mtmera:title-ar" content="أسعار MTMERA Business — أساسي وأعمال واحترافي">
+<meta name="mtmera:desc-ar" content="خطط أسعار MTMERA Business — أساسي وأعمال واحترافي، تبدأ من 299 جنيه شهريًا. وفر شهرين مع الاشتراك السنوي.">
 <link rel="canonical" href="https://mtmera.com/pricing.html">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -112,109 +112,141 @@
         <span data-lang="ar">خطط مصممة لتنمو معك</span>
       </h1>
       <p class="section-desc" data-reveal style="margin-inline:auto">
-        <span data-lang="en">MTMERA Business is still in private testing, so final pricing hasn't been set yet. Here's the plan structure we're working toward.</span>
-        <span data-lang="ar">MTMERA Business لا يزال قيد الاختبار الخاص، لذا لم يتم تحديد السعر النهائي بعد. هذا هو هيكل الخطط الذي نعمل عليه.</span>
+        <span data-lang="en">Simple, transparent pricing in Egyptian Pounds — no trials, no hidden fees, no add-ons. Pick a plan and get started today.</span>
+        <span data-lang="ar">أسعار واضحة وبسيطة بالجنيه المصري — بدون تجربة مجانية، بدون رسوم خفية، وبدون إضافات. اختر باقتك وابدأ اليوم.</span>
       </p>
     </div>
 
-    <div class="pricing-grid">
+    <div class="price-toggle" data-reveal role="group" aria-label="Billing cycle">
+      <button type="button" class="price-toggle-btn is-active" data-cycle="monthly">
+        <span data-lang="en">Monthly</span><span data-lang="ar">شهري</span>
+      </button>
+      <button type="button" class="price-toggle-btn" data-cycle="yearly">
+        <span data-lang="en">Annual</span><span data-lang="ar">سنوي</span>
+        <span class="price-toggle-save"><span data-lang="en">Save 2 months</span><span data-lang="ar">وفر شهرين</span></span>
+      </button>
+    </div>
+
+    <div class="pricing-grid" id="pricingGrid">
       <div class="price-card" data-reveal>
         <div class="price-head">
-          <h3 class="price-name">Starter</h3>
+          <h3 class="price-name"><span data-lang="en">Starter</span><span data-lang="ar">البداية</span></h3>
           <p class="price-tagline">
             <span data-lang="en">Sales &amp; inventory basics</span>
             <span data-lang="ar">أساسيات المبيعات والمخزون</span>
           </p>
         </div>
         <div class="price-tag">
-          <span data-lang="en">Coming Soon</span>
-          <span data-lang="ar">قريبًا</span>
+          <span class="price-value cycle-monthly">
+            <span data-lang="en">299 EGP</span><span data-lang="ar">299 جنيه</span>
+            <small><span data-lang="en">/ month</span><span data-lang="ar">/ شهر</span></small>
+          </span>
+          <span class="price-value cycle-yearly">
+            <span data-lang="en">2,990 EGP</span><span data-lang="ar">2,990 جنيه</span>
+            <small><span data-lang="en">/ year</span><span data-lang="ar">/ سنة</span></small>
+          </span>
         </div>
         <ul class="price-features">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Sales invoices &amp; returns</span><span data-lang="ar">فواتير بيع ومرتجعات</span></li>
+            <span data-lang="en">Sales management</span><span data-lang="ar">إدارة المبيعات</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Products, categories &amp; stock</span><span data-lang="ar">منتجات وتصنيفات ومخزون</span></li>
+            <span data-lang="en">Purchase management</span><span data-lang="ar">إدارة المشتريات</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Customer accounts</span><span data-lang="ar">حسابات العملاء</span></li>
+            <span data-lang="en">Inventory movement &amp; counting</span><span data-lang="ar">حركة المخزون والجرد</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Single warehouse</span><span data-lang="ar">مخزن واحد</span></li>
+            <span data-lang="en">Basic reports</span><span data-lang="ar">تقارير أساسية</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Bilingual Arabic / English</span><span data-lang="ar">ثنائي اللغة عربي / إنجليزي</span></li>
+            <span data-lang="en">Unlimited users</span><span data-lang="ar">مستخدمين غير محدودين</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-lang="en">1 warehouse</span><span data-lang="ar">مخزن واحد</span></li>
         </ul>
-        <button type="button" class="btn btn-ghost btn-block price-cta" data-inquire data-package-en="MTMERA Business — Starter plan" data-package-ar="باقة Starter من MTMERA Business">
-          <span data-lang="en">Contact Us</span><span data-lang="ar">تواصل معنا</span>
-        </button>
+        <a href="https://app.mtmera.com/signup" class="btn btn-ghost btn-block">
+          <span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span>
+        </a>
       </div>
 
       <div class="price-card featured" data-reveal>
         <span class="price-badge">
-          <span data-lang="en">Most Requested</span>
-          <span data-lang="ar">الأكثر طلبًا</span>
+          <span data-lang="en">Most Popular</span>
+          <span data-lang="ar">الأكثر اختياراً</span>
         </span>
         <div class="price-head">
-          <h3 class="price-name">Business</h3>
+          <h3 class="price-name"><span data-lang="en">Business</span><span data-lang="ar">الأعمال</span></h3>
           <p class="price-tagline">
             <span data-lang="en">Sales, purchases &amp; reporting</span>
             <span data-lang="ar">مبيعات ومشتريات وتقارير</span>
           </p>
         </div>
         <div class="price-tag">
-          <span data-lang="en">Coming Soon</span>
-          <span data-lang="ar">قريبًا</span>
+          <span class="price-value cycle-monthly">
+            <span data-lang="en">599 EGP</span><span data-lang="ar">599 جنيه</span>
+            <small><span data-lang="en">/ month</span><span data-lang="ar">/ شهر</span></small>
+          </span>
+          <span class="price-value cycle-yearly">
+            <span data-lang="en">5,990 EGP</span><span data-lang="ar">5,990 جنيه</span>
+            <small><span data-lang="en">/ year</span><span data-lang="ar">/ سنة</span></small>
+          </span>
         </div>
         <ul class="price-features">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Everything in Starter</span><span data-lang="ar">كل ما في Starter</span></li>
+            <span data-lang="en">Everything in Starter</span><span data-lang="ar">كل ما في البداية</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Purchase invoices &amp; returns</span><span data-lang="ar">فواتير شراء ومرتجعات</span></li>
+            <span data-lang="en">Customer account statement</span><span data-lang="ar">كشف حساب عميل</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Multiple warehouses &amp; transfers</span><span data-lang="ar">مخازن متعددة وتحويلات</span></li>
+            <span data-lang="en">Supplier account statement</span><span data-lang="ar">كشف حساب مورد</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Stocktaking</span><span data-lang="ar">جرد المخزون</span></li>
+            <span data-lang="en">Inventory valuation</span><span data-lang="ar">تقييم المخزون</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Sales, purchases &amp; statement reports</span><span data-lang="ar">تقارير مبيعات ومشتريات وكشوف حساب</span></li>
+            <span data-lang="en">Advanced reports</span><span data-lang="ar">تقارير متقدمة</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">CSV / Excel export</span><span data-lang="ar">تصدير CSV / Excel</span></li>
+            <span data-lang="en">3 warehouses</span><span data-lang="ar">3 مخازن</span></li>
         </ul>
-        <button type="button" class="btn btn-primary btn-block price-cta" data-inquire data-package-en="MTMERA Business — Business plan" data-package-ar="باقة Business من MTMERA Business">
-          <span data-lang="en">Contact Us</span><span data-lang="ar">تواصل معنا</span>
-        </button>
+        <a href="https://app.mtmera.com/signup" class="btn btn-primary btn-block">
+          <span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span>
+        </a>
       </div>
 
       <div class="price-card" data-reveal>
         <div class="price-head">
-          <h3 class="price-name">Professional</h3>
+          <h3 class="price-name"><span data-lang="en">Professional</span><span data-lang="ar">الاحترافي</span></h3>
           <p class="price-tagline">
-            <span data-lang="en">Full team &amp; access control</span>
-            <span data-lang="ar">فريق كامل وتحكم بالصلاحيات</span>
+            <span data-lang="en">Cash accounts, exports &amp; audit trail</span>
+            <span data-lang="ar">صناديق نقدية وتصدير وسجل تدقيق</span>
           </p>
         </div>
         <div class="price-tag">
-          <span data-lang="en">Coming Soon</span>
-          <span data-lang="ar">قريبًا</span>
+          <span class="price-value cycle-monthly">
+            <span data-lang="en">899 EGP</span><span data-lang="ar">899 جنيه</span>
+            <small><span data-lang="en">/ month</span><span data-lang="ar">/ شهر</span></small>
+          </span>
+          <span class="price-value cycle-yearly">
+            <span data-lang="en">8,990 EGP</span><span data-lang="ar">8,990 جنيه</span>
+            <small><span data-lang="en">/ year</span><span data-lang="ar">/ سنة</span></small>
+          </span>
         </div>
         <ul class="price-features">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Everything in Business</span><span data-lang="ar">كل ما في Business</span></li>
+            <span data-lang="en">Everything in Business</span><span data-lang="ar">كل ما في الأعمال</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Multiple user accounts</span><span data-lang="ar">حسابات مستخدمين متعددة</span></li>
+            <span data-lang="en">Cash account statement</span><span data-lang="ar">كشف حساب صندوق</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Role-based permissions</span><span data-lang="ar">صلاحيات حسب الدور</span></li>
+            <span data-lang="en">Excel / CSV export</span><span data-lang="ar">تصدير Excel / CSV</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en">Full audit log</span><span data-lang="ar">سجل تدقيق كامل</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-lang="en">Unlimited warehouses</span><span data-lang="ar">مخازن غير محدودة</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en">Priority support</span><span data-lang="ar">دعم فني ذو أولوية</span></li>
         </ul>
-        <button type="button" class="btn btn-ghost btn-block price-cta" data-inquire data-package-en="MTMERA Business — Professional plan" data-package-ar="باقة Professional من MTMERA Business">
-          <span data-lang="en">Contact Us</span><span data-lang="ar">تواصل معنا</span>
-        </button>
+        <a href="https://app.mtmera.com/signup" class="btn btn-ghost btn-block">
+          <span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span>
+        </a>
       </div>
     </div>
 
     <p class="pricing-note" data-reveal>
-      <span data-lang="en">Monthly and yearly billing will both be available once MTMERA Business is publicly launched.</span>
-      <span data-lang="ar">سيتوفر الاشتراك الشهري والسنوي معًا بعد إطلاق MTMERA Business للعموم.</span>
+      <span data-lang="en">All plans include unlimited users. Prices are in Egyptian Pounds and billed automatically once your account is confirmed.</span>
+      <span data-lang="ar">كل الباقات فيها مستخدمين غير محدودين. الأسعار بالجنيه المصري وتُفعّل تلقائيًا بعد تأكيد حسابك.</span>
     </p>
 
     <p class="pricing-crosslink" data-reveal>

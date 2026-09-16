@@ -715,7 +715,6 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
 .pricing-grid{
   display:grid; gap: var(--space-6);
   grid-template-columns: 1fr;
-  align-items:start;
 }
 @media (min-width:860px){ .pricing-grid{ grid-template-columns: repeat(3,1fr); } }
 
@@ -753,19 +752,57 @@ html[dir="rtl"] .mobile-nav.open{ transform: translateX(0); }
 .price-card.featured .price-tagline{ color: rgba(255,255,255,.85); }
 
 .price-tag{
-  font-size: clamp(24px, 3vw, 28px);
-  font-weight:800; letter-spacing:-0.01em;
   padding-block: var(--space-4);
   border-block: 1px solid var(--border);
   margin-bottom: var(--space-5);
 }
 .price-card.featured .price-tag{ border-color: rgba(255,255,255,.25); }
 
+.price-value{ display:none; font-size: clamp(24px, 3vw, 28px); font-weight:800; letter-spacing:-0.01em; }
+.price-value.cycle-monthly{ display:block; }
+.pricing-grid.is-yearly .price-value.cycle-monthly{ display:none; }
+.pricing-grid.is-yearly .price-value.cycle-yearly{ display:block; }
+.price-tag small{
+  display:block; margin-top:2px;
+  font-size:13px; font-weight:600; letter-spacing:0;
+  color: var(--text-soft);
+}
+.price-card.featured .price-tag small{ color: rgba(255,255,255,.75); }
+
+/* Monthly / Annual toggle */
+.price-toggle{
+  display:flex; align-items:center; gap:4px; width:max-content;
+  margin: 0 auto var(--space-7);
+  padding:4px; background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-full);
+}
+.price-toggle-btn{
+  position:relative;
+  display:flex; align-items:center; gap:8px;
+  padding: 9px 20px; border-radius: var(--radius-full);
+  font-size:14px; font-weight:700; color: var(--text-muted);
+  background:none; border:none; cursor:pointer;
+  transition: background var(--dur-base) var(--ease-out), color var(--dur-base);
+  white-space:nowrap;
+}
+.price-toggle-btn.is-active{ background: var(--brand-gradient); color:#fff; }
+.price-toggle-save{
+  font-size:11px; font-weight:800; letter-spacing:.02em;
+  padding:3px 8px; border-radius: var(--radius-full);
+  background: var(--teal-500); color:#fff;
+}
+.price-toggle-btn.is-active .price-toggle-save{ background: rgba(255,255,255,.24); }
+.price-toggle-btn:not(.is-active) .price-toggle-save{ background: var(--brand-gradient-soft); color: var(--teal-600); }
+:root[data-theme="dark"] .price-toggle-btn:not(.is-active) .price-toggle-save{ color: var(--cyan-300); }
+
 .price-features{ display:flex; flex-direction:column; gap:12px; margin-bottom: var(--space-6); flex:1; }
 .price-features li{ display:flex; align-items:flex-start; gap:10px; font-size:14.5px; color: var(--text-muted); line-height:1.5; }
 .price-card.featured .price-features li{ color: rgba(255,255,255,.92); }
 .price-features svg{ width:17px; height:17px; flex-shrink:0; margin-top:2px; color: var(--teal-500); }
 .price-card.featured .price-features svg{ color:#fff; }
+.price-features li.excluded{ opacity:.45; }
+.price-features li.excluded svg{ color: var(--text-soft); }
+.price-card.featured .price-features li.excluded{ opacity:.5; }
+.price-card.featured .price-features li.excluded svg{ color: rgba(255,255,255,.5); }
 
 .price-card.featured .btn-primary{
   background-image:none; background:#fff; color: var(--navy-800);
