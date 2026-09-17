@@ -1148,6 +1148,7 @@ html[dir="rtl"] .marquee-track{ animation-direction: reverse; }
   background: var(--navy-950);
 }
 .mockup-bar span{ width:9px; height:9px; border-radius:50%; background: rgba(255,255,255,.18); }
+.mockup-screenshot{ width:100%; display:block; }
 .mockup-body{
   position:relative;
   padding: var(--space-6);
