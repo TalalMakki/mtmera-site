@@ -277,11 +277,26 @@ html[dir="rtl"] .btn-primary:hover svg{ transform: translateX(-4px); }
 .brand-word b em{ font-style:normal; color: var(--teal-500); }
 .brand-word span{ font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color: var(--text-soft); font-weight:600; }
 
+/* Tagline wraps to three lines and then collides with the header buttons on phones */
+@media (max-width: 560px){
+  html .site-header .brand-word span{ display:none; }
+}
+@media (max-width: 420px){
+  .site-header .container{ gap: 12px; }
+  .brand{ gap: 8px; }
+  .brand-mark{ height: 30px; }
+  .site-header .header-actions{ gap: 8px; }
+  .site-header .icon-btn{ width: 38px; height: 38px; }
+  .site-header .lang-btn{ height: 38px; padding: 0 12px; }
+  .site-header .lang-btn svg{ display: none; }
+}
+
 .nav-links{ display:none; align-items:center; gap: 22px; }
 .nav-links a{
   position:relative;
   font-weight:600; font-size:15px; color: var(--text-muted);
   padding-block: 6px;
+  white-space: nowrap;
   transition: color var(--dur-fast);
 }
 .nav-links a::after{
@@ -1093,6 +1108,7 @@ html[dir="rtl"] .marquee-track{ animation-direction: reverse; }
 
 .login-link{
   font-weight:700; font-size:14.5px; color: var(--text-muted);
+  white-space: nowrap;
   transition: color var(--dur-fast);
   display:none;
 }

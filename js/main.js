@@ -322,10 +322,10 @@
     btn.addEventListener('click', function () {
       var label = isAr() ? btn.getAttribute('data-package-ar') : btn.getAttribute('data-package-en');
       var subscribeText = isAr()
-        ? 'مرحبًا، حابب أشترك في ' + label + '.'
+        ? 'مرحبًا، أود الاشتراك في ' + label + '.'
         : 'Hi, I\'d like to subscribe to the ' + label + '.';
       var inquireText = isAr()
-        ? 'مرحبًا، حابب أعرف أكتر عن ' + label + '.'
+        ? 'مرحبًا، أود معرفة المزيد عن ' + label + '.'
         : 'Hi, I\'d like to know more about the ' + label + '.';
       var text = btn.hasAttribute('data-inquire') ? inquireText : subscribeText;
       window.open('https://wa.me/201142006128?text=' + encodeURIComponent(text), '_blank', 'noopener');
