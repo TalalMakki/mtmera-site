@@ -275,7 +275,7 @@ html[dir="rtl"] .btn-primary:hover svg{ transform: translateX(-4px); }
   color: var(--text);
 }
 .brand-word b em{ font-style:normal; color: var(--teal-500); }
-.brand-word span{ font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color: var(--text-soft); font-weight:600; }
+.brand-word span{ font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color: var(--text-soft); font-weight:600; white-space:nowrap; }
 
 /* Tagline wraps to three lines and then collides with the header buttons on phones */
 @media (max-width: 560px){
