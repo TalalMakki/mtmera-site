@@ -7,6 +7,12 @@
   var t = localStorage.getItem('mtmera-theme');
   if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', t);
+  /* Apply the saved language before first paint so RTL layout (and the
+     off-canvas menu position) doesn't flip, and animate, after load. */
+  if (localStorage.getItem('mtmera-lang') === 'ar') {
+    document.documentElement.setAttribute('lang', 'ar');
+    document.documentElement.setAttribute('dir', 'rtl');
+  }
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

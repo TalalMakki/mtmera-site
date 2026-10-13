@@ -7,6 +7,12 @@
   var t = localStorage.getItem('mtmera-theme');
   if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', t);
+  /* Apply the saved language before first paint so RTL layout (and the
+     off-canvas menu position) doesn't flip, and animate, after load. */
+  if (localStorage.getItem('mtmera-lang') === 'ar') {
+    document.documentElement.setAttribute('lang', 'ar');
+    document.documentElement.setAttribute('dir', 'rtl');
+  }
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -108,7 +114,7 @@
       </h1>
       <p class="hero-sub" data-reveal>
         <span data-lang="en">We design and build custom software, websites and online stores, then host and look after them on fast, monitored servers. You deal with the same team from the first meeting to day-to-day support.</span>
-        <span data-lang="ar">نصمم ونطور البرمجيات والمواقع والمتاجر الإلكترونية، ثم نستضيفها ونتابعها على سيرفرات سريعة ومراقَبة. وتتعامل مع الفريق نفسه من أول اجتماع حتى الدعم اليومي.</span>
+        <span data-lang="ar">نصمم ونطور البرمجيات والمواقع والمتاجر الإلكترونية، ثم نستضيفها ونتابعها على خوادم سريعة ومراقَبة. وتتعامل مع الفريق نفسه من أول اجتماع حتى الدعم اليومي.</span>
       </p>
       <div class="hero-cta" data-reveal>
         <a href="services.html" class="btn btn-primary btn-lg">
@@ -191,7 +197,7 @@
         <div class="node-chip c4">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           <span data-lang="en">900 Mbps Servers</span>
-          <span data-lang="ar">سيرفرات بسرعة 900 ميجابت</span>
+          <span data-lang="ar">خوادم بسرعة 900 ميجابت</span>
         </div>
       </div>
     </div>
@@ -207,7 +213,7 @@
     </div>
     <div class="highlight-item" data-reveal>
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
-      <div><b data-lang="en">Websites &amp; Stores</b><b data-lang="ar">مواقع ومتاجر</b><br><small data-lang="en">Arabic and English, mobile-ready</small><small data-lang="ar">عربي وإنجليزي، ومتوافقة مع الجوال</small></div>
+      <div><b data-lang="en">Websites &amp; Stores</b><b data-lang="ar">مواقع ومتاجر</b><br><small data-lang="en">Arabic and English, mobile-ready</small><small data-lang="ar">بالعربية والإنجليزية، ومتوافقة مع الجوال</small></div>
     </div>
     <div class="highlight-item" data-reveal>
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
@@ -230,7 +236,7 @@
       </div>
       <h2 class="section-title" data-reveal>
         <span data-lang="en">From the first line of code to the server it runs on</span>
-        <span data-lang="ar">من أول سطر برمجي حتى السيرفر الذي يعمل عليه</span>
+        <span data-lang="ar">من أول سطر برمجي حتى الخادم الذي يعمل عليه</span>
       </h2>
       <p class="section-desc" data-reveal style="margin-inline:auto">
         <span data-lang="en">We handle development, hosting and maintenance ourselves, so one team is responsible whenever something needs to change.</span>
@@ -273,7 +279,7 @@
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
         <h3><span data-lang="en">Cloud &amp; Managed Infrastructure</span><span data-lang="ar">السحابة والبنية التحتية المُدارة</span></h3>
         <p><span data-lang="en">Hosting on 900 Mbps servers. We move your site or system over, monitor it, and take care of updates and backups.</span>
-        <span data-lang="ar">استضافة على سيرفرات بسرعة 900 ميجابت. ننقل موقعك أو نظامك، ونراقبه، ونتولى التحديثات والنسخ الاحتياطي.</span></p>
+        <span data-lang="ar">استضافة على خوادم بسرعة 900 ميجابت. ننقل موقعك أو نظامك، ونراقبه، ونتولى التحديثات والنسخ الاحتياطي.</span></p>
         <div class="tag-row">
           <span data-lang="en">Hosting · Migration · Backups</span>
           <span data-lang="ar">استضافة · نقل · نسخ احتياطي</span>
@@ -288,10 +294,10 @@
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
         <h3><span data-lang="en">Video Production</span><span data-lang="ar">إنتاج الفيديو</span></h3>
         <p><span data-lang="en">Promotional videos for factories and businesses, from script to final edit.</span>
-        <span data-lang="ar">فيديوهات ترويجية للمصانع والمشاريع التجارية، من السكريبت حتى المونتاج النهائي.</span></p>
+        <span data-lang="ar">فيديوهات ترويجية للمصانع والمشاريع التجارية، من كتابة النص حتى المونتاج النهائي.</span></p>
         <div class="tag-row">
           <span data-lang="en">Brand Films · Product · Reels</span>
-          <span data-lang="ar">أفلام تعريفية · منتجات · ريلز</span>
+          <span data-lang="ar">أفلام تعريفية · منتجات · مقاطع قصيرة</span>
         </div>
       <span class="service-link">
         <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>
@@ -328,7 +334,7 @@
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-11.8V5l-8-3-8 3v5.2C4 17.5 12 22 12 22z"/></svg></div>
         <div><h4><span data-lang="en">Security &amp; Reliability</span><span data-lang="ar">الأمان والموثوقية</span></h4>
         <p><span data-lang="en">SSL, regular backups and server monitoring on everything we host, so most problems are fixed before you notice them.</span>
-        <span data-lang="ar">شهادات SSL ونسخ احتياطي منتظم ومراقبة للسيرفرات على كل ما نستضيفه، لنصلح معظم المشكلات قبل أن تلاحظها.</span></p></div>
+        <span data-lang="ar">شهادات SSL ونسخ احتياطي منتظم ومراقبة للخوادم على كل ما نستضيفه، لنصلح معظم المشكلات قبل أن تلاحظها.</span></p></div>
       </div>
       <div class="why-card" data-reveal>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg></div>

@@ -7,13 +7,19 @@
   var t = localStorage.getItem('mtmera-theme');
   if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', t);
+  /* Apply the saved language before first paint so RTL layout (and the
+     off-canvas menu position) doesn't flip, and animate, after load. */
+  if (localStorage.getItem('mtmera-lang') === 'ar') {
+    document.documentElement.setAttribute('lang', 'ar');
+    document.documentElement.setAttribute('dir', 'rtl');
+  }
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MTMERA Business Pricing — Starter, Business &amp; Professional</title>
 <meta name="description" content="Pricing plans for MTMERA Business — Starter, Business and Professional, starting at 299 EGP/month. Save 2 months with annual billing.">
 <meta name="mtmera:title-ar" content="أسعار MTMERA Business — أساسي وأعمال واحترافي">
-<meta name="mtmera:desc-ar" content="خطط أسعار MTMERA Business — أساسي وأعمال واحترافي، تبدأ من 299 جنيه شهريًا. وفر شهرين مع الاشتراك السنوي.">
+<meta name="mtmera:desc-ar" content="خطط أسعار MTMERA Business — أساسي وأعمال واحترافي، تبدأ من 299 جنيه شهريًا. وفّر شهرين مع الاشتراك السنوي.">
 <link rel="canonical" href="https://mtmera.com/pricing.html">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -127,7 +133,7 @@
       </button>
       <button type="button" class="price-toggle-btn" data-cycle="yearly">
         <span data-lang="en">Annual</span><span data-lang="ar">سنوي</span>
-        <span class="price-toggle-save"><span data-lang="en">Save 2 months</span><span data-lang="ar">وفر شهرين</span></span>
+        <span class="price-toggle-save"><span data-lang="en">Save 2 months</span><span data-lang="ar">وفّر شهرين</span></span>
       </button>
     </div>
 
@@ -162,7 +168,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en">Basic reports</span><span data-lang="ar">تقارير أساسية</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Unlimited users</span><span data-lang="ar">مستخدمين غير محدودين</span></li>
+            <span data-lang="en">Unlimited users</span><span data-lang="ar">عدد غير محدود من المستخدمين</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en">1 warehouse</span><span data-lang="ar">مخزن واحد</span></li>
           <li class="excluded"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -207,7 +213,7 @@
         </div>
         <ul class="price-features">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Everything in Starter</span><span data-lang="ar">كل ما في البداية</span></li>
+            <span data-lang="en">Everything in Starter</span><span data-lang="ar">كل ما في باقة البداية</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en">Customer account statement</span><span data-lang="ar">كشف حساب عميل</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -217,7 +223,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en">Advanced reports</span><span data-lang="ar">تقارير متقدمة</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Unlimited users</span><span data-lang="ar">مستخدمين غير محدودين</span></li>
+            <span data-lang="en">Unlimited users</span><span data-lang="ar">عدد غير محدود من المستخدمين</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en">3 warehouses</span><span data-lang="ar">3 مخازن</span></li>
           <li class="excluded"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -252,7 +258,7 @@
         </div>
         <ul class="price-features">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Everything in Business</span><span data-lang="ar">كل ما في الأعمال</span></li>
+            <span data-lang="en">Everything in Business</span><span data-lang="ar">كل ما في باقة الأعمال</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en">Cash account statement</span><span data-lang="ar">كشف حساب صندوق</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -262,7 +268,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en">Advanced control &amp; monitoring</span><span data-lang="ar">تحكم ومراقبة متقدمة</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-lang="en">Unlimited users</span><span data-lang="ar">مستخدمين غير محدودين</span></li>
+            <span data-lang="en">Unlimited users</span><span data-lang="ar">عدد غير محدود من المستخدمين</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en">Unlimited warehouses</span><span data-lang="ar">مخازن غير محدودة</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -276,7 +282,7 @@
 
     <p class="pricing-note" data-reveal>
       <span data-lang="en">All plans include unlimited users. Prices are in Egyptian Pounds (EGP).</span>
-      <span data-lang="ar">كل الباقات فيها مستخدمين غير محدودين. الأسعار بالجنيه المصري.</span>
+      <span data-lang="ar">تتضمن جميع الباقات عددًا غير محدود من المستخدمين. الأسعار بالجنيه المصري.</span>
     </p>
 
     <p class="pricing-crosslink" data-reveal>

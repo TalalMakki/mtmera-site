@@ -7,6 +7,12 @@
   var t = localStorage.getItem('mtmera-theme');
   if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', t);
+  /* Apply the saved language before first paint so RTL layout (and the
+     off-canvas menu position) doesn't flip, and animate, after load. */
+  if (localStorage.getItem('mtmera-lang') === 'ar') {
+    document.documentElement.setAttribute('lang', 'ar');
+    document.documentElement.setAttribute('dir', 'rtl');
+  }
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -179,7 +185,7 @@
       </div>
       <div class="service-card" data-reveal>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3><span data-lang="en">Customers &amp; Suppliers</span><span data-lang="ar">العملاء والموردين</span></h3>
+        <h3><span data-lang="en">Customers &amp; Suppliers</span><span data-lang="ar">العملاء والموردون</span></h3>
         <p><span data-lang="en">Customer and supplier profiles with running balances, kept in sync with every sale, purchase and return.</span>
         <span data-lang="ar">ملفات عملاء وموردين مع أرصدة جارية، تتحدث تلقائيًا مع كل عملية بيع أو شراء أو مرتجع.</span></p>
       </div>

@@ -7,6 +7,12 @@
   var t = localStorage.getItem('mtmera-theme');
   if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', t);
+  /* Apply the saved language before first paint so RTL layout (and the
+     off-canvas menu position) doesn't flip, and animate, after load. */
+  if (localStorage.getItem('mtmera-lang') === 'ar') {
+    document.documentElement.setAttribute('lang', 'ar');
+    document.documentElement.setAttribute('dir', 'rtl');
+  }
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -146,10 +152,10 @@
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg></div>
           <h3><span data-lang="en">AI Solutions</span><span data-lang="ar">حلول الذكاء الاصطناعي</span></h3>
           <p><span data-lang="en">Practical AI features inside the software we build, such as chatbots, workflow automation and better reporting.</span>
-          <span data-lang="ar">قدرات ذكاء اصطناعي عملية ضمن البرمجيات التي نبنيها: شات بوت، أتمتة العمليات، وتقارير أذكى.</span></p>
+          <span data-lang="ar">قدرات ذكاء اصطناعي عملية ضمن البرمجيات التي نبنيها: روبوتات المحادثة، وأتمتة العمليات، وتقارير أذكى.</span></p>
           <div class="tag-row">
             <span data-lang="en">Chatbots · Automation · Insights</span>
-            <span data-lang="ar">شات بوت · أتمتة · تحليلات</span>
+            <span data-lang="ar">روبوتات محادثة · أتمتة · تحليلات</span>
           </div>
         <span class="service-link">
           <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>
@@ -208,7 +214,7 @@
         <div>
           <h2><span data-lang="en">Cloud &amp; Managed Infrastructure</span><span data-lang="ar">السحابة والبنية التحتية المُدارة</span></h2>
           <p><span data-lang="en">Hosting on 900 Mbps servers, plus moving your existing site and looking after it day to day.</span>
-          <span data-lang="ar">استضافة على سيرفرات بسرعة 900 ميجابت، مع نقل موقعك الحالي ومتابعته يوميًا.</span></p>
+          <span data-lang="ar">استضافة على خوادم بسرعة 900 ميجابت، مع نقل موقعك الحالي ومتابعته يوميًا.</span></p>
         </div>
       </div>
 
@@ -217,7 +223,7 @@
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
           <h3><span data-lang="en">Cloud &amp; Hosting</span><span data-lang="ar">السحابة والاستضافة</span></h3>
           <p><span data-lang="en">Reliable hosting with automatic backups and monitoring. We can also move your current site or system to our servers.</span>
-          <span data-lang="ar">استضافة موثوقة مع نسخ احتياطي تلقائي ومراقبة. ويمكننا أيضًا نقل موقعك أو نظامك الحالي إلى سيرفراتنا.</span></p>
+          <span data-lang="ar">استضافة موثوقة مع نسخ احتياطي تلقائي ومراقبة. ويمكننا أيضًا نقل موقعك أو نظامك الحالي إلى خوادمنا.</span></p>
           <div class="tag-row">
             <span data-lang="en">Hosting · Migration · Backups</span>
             <span data-lang="ar">استضافة · نقل · نسخ احتياطي</span>
@@ -251,7 +257,7 @@
         <div>
           <h2><span data-lang="en">Video Production</span><span data-lang="ar">إنتاج الفيديو</span></h2>
           <p><span data-lang="en">Promotional videos that show what your business makes and sells, from script to final edit.</span>
-          <span data-lang="ar">فيديوهات ترويجية تعرض ما يصنعه مشروعك وما يبيعه، من السكريبت حتى المونتاج النهائي.</span></p>
+          <span data-lang="ar">فيديوهات ترويجية تعرض ما يصنعه مشروعك وما يبيعه، من كتابة النص حتى المونتاج النهائي.</span></p>
         </div>
       </div>
 
@@ -275,10 +281,10 @@
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
           <h3><span data-lang="en">Videos for Commercial Businesses</span><span data-lang="ar">فيديوهات للمشاريع التجارية</span></h3>
           <p><span data-lang="en">Product videos, brand films and social media reels that help you sell and stay visible.</span>
-          <span data-lang="ar">فيديوهات المنتجات، وأفلام تعريفية، وريلز للسوشال ميديا تساعدك على البيع والظهور.</span></p>
+          <span data-lang="ar">فيديوهات المنتجات، وأفلام تعريفية، ومقاطع قصيرة لوسائل التواصل الاجتماعي تساعدك على البيع والظهور.</span></p>
           <div class="tag-row">
             <span data-lang="en">Product · Brand Film · Reels</span>
-            <span data-lang="ar">منتج · فيلم تعريفي · ريلز</span>
+            <span data-lang="ar">منتج · فيلم تعريفي · مقاطع قصيرة</span>
           </div>
         <span class="service-link">
           <span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span>

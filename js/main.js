@@ -26,8 +26,16 @@
   var savedDescEn = null;
 
   function setLang(lang) {
+    /* Flipping dir moves the closed off-canvas menu to the other edge; without
+       this its transform transition would sweep it across the screen. */
+    var mobileNavEl = document.getElementById('mobileNav');
+    if (mobileNavEl) mobileNavEl.style.transition = 'none';
     html.setAttribute('lang', lang);
     html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    if (mobileNavEl) {
+      void mobileNavEl.offsetWidth;
+      mobileNavEl.style.transition = '';
+    }
     var descTag = document.querySelector('meta[name="description"]');
     if (lang === 'ar') {
       if (savedTitleEn === null) savedTitleEn = document.title;
