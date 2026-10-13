@@ -332,6 +332,28 @@
     });
   });
 
+  /* ---------------- Quote buttons: straight to WhatsApp with a set message ---------------- */
+  document.querySelectorAll('.wa-cta[data-wa-en]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = isAr() ? btn.getAttribute('data-wa-ar') : btn.getAttribute('data-wa-en');
+      window.open('https://wa.me/201142006128?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    });
+  });
+
+  /* ---------------- Video page: showreel respects reduced motion, one sample plays at a time ---------------- */
+  var showreel = document.querySelector('.showreel');
+  if (showreel && reduceMotion) {
+    showreel.removeAttribute('autoplay');
+    showreel.pause();
+    showreel.setAttribute('controls', '');
+  }
+  var sampleVideos = document.querySelectorAll('.sample-video');
+  sampleVideos.forEach(function (video) {
+    video.addEventListener('play', function () {
+      sampleVideos.forEach(function (other) { if (other !== video) other.pause(); });
+    });
+  });
+
   /* ---------------- Pricing: Monthly / Annual toggle ---------------- */
   var priceToggle = document.querySelector('.price-toggle');
   var pricingGrid = document.getElementById('pricingGrid');

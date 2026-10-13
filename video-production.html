@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  var t = localStorage.getItem('mtmera-theme');
+  if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MTMERA — Video Production &amp; Promotional Videos</title>
+<meta name="description" content="Promotional videos for industrial and commercial businesses: factory tours, product videos, brand films and social media reels by MTMERA.">
+<meta name="mtmera:title-ar" content="MTMERA — إنتاج الفيديو والفيديوهات الترويجية">
+<meta name="mtmera:desc-ar" content="فيديوهات ترويجية للمشاريع الصناعية والتجارية: جولات داخل المصانع، فيديوهات المنتجات، أفلام تعريفية وريلز للسوشال ميديا من MTMERA.">
+<link rel="canonical" href="https://mtmera.com/video-production.html">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-lang="en">Skip to content</a>
+<a class="skip-link" href="#main" data-lang="ar">تخطَّ إلى المحتوى</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="MTMERA home">
+      <img class="brand-mark" src="assets/logo-icon.png" alt="MTMERA logo">
+      <span class="brand-word">
+        <b>MTM<em>ERA</em></b>
+        <span data-lang="en">Software · Cloud · Hosting</span>
+        <span data-lang="ar">برمجيات · سحابة · استضافة</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="services.html"><span data-lang="en">Services</span><span data-lang="ar">خدماتنا</span></a>
+      <a href="saas.html"><span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span></a>
+      <a href="solutions.html"><span data-lang="en">Solutions</span><span data-lang="ar">الحلول</span></a>
+      <a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a>
+      <a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a>
+      <a href="about.html"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a>
+      <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="index.html#contact" class="btn btn-primary nav-cta">
+        <span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span>
+      </a>
+      <button class="lang-btn" id="langToggle" type="button" aria-label="Change language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span data-lang="en">AR</span>
+        <span data-lang="ar">EN</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-scrim" id="navScrim"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="services.html"><span data-lang="en">Services</span><span data-lang="ar">خدماتنا</span></a>
+  <a href="saas.html"><span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span></a>
+  <a href="solutions.html"><span data-lang="en">Solutions</span><span data-lang="ar">الحلول</span></a>
+  <a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a>
+  <a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a>
+  <a href="about.html"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a>
+  <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a>
+  <a href="index.html#contact" class="mobile-nav-cta"><span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span></a>
+</nav>
+
+<main id="main">
+
+<!-- ============ VIDEO HERO ============ -->
+<section class="section-pad page-hero">
+  <div class="container">
+    <div class="back-links-row" data-reveal>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-lang="en">Back to Home</span>
+        <span data-lang="ar">الرجوع للرئيسية</span>
+      </a>
+      <span class="back-link-sep">·</span>
+      <a href="services.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-lang="en">Back to Services</span>
+        <span data-lang="ar">الرجوع للخدمات</span>
+      </a>
+    </div>
+
+    <div class="video-hero">
+      <div class="video-hero-text">
+        <div class="eyebrow" data-reveal><span class="dot"></span>
+          <span data-lang="en">VIDEO PRODUCTION</span>
+          <span data-lang="ar">إنتاج الفيديو</span>
+        </div>
+        <h1 class="section-title" data-reveal>
+          <span data-lang="en">Promotional videos for your business</span>
+          <span data-lang="ar">فيديوهات ترويجية لمشروعك</span>
+        </h1>
+        <p class="section-desc" data-reveal>
+          <span data-lang="en">We write, produce and edit short videos that show what your company makes and why customers should choose you, for factories, shops and service businesses.</span>
+          <span data-lang="ar">نكتب وننتج ونمنتج فيديوهات قصيرة تعرض ما تقدمه شركتك ولماذا يختارك العملاء، للمصانع والمحلات التجارية وشركات الخدمات.</span>
+        </p>
+        <div class="hero-cta" data-reveal>
+          <button type="button" class="btn btn-primary btn-lg wa-cta"
+            data-wa-en="Hi, I'd like a quote for a promotional video."
+            data-wa-ar="مرحبًا، أود الحصول على عرض سعر لفيديو ترويجي.">
+            <span data-lang="en">Request a Quote</span><span data-lang="ar">اطلب عرض سعر</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <a href="#samples" class="btn btn-ghost btn-lg">
+            <span data-lang="en">Watch Our Work</span><span data-lang="ar">شاهد أعمالنا</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="video-hero-visual" data-reveal>
+        <div class="video-frame">
+          <video class="showreel" src="assets/videos/showreel.mp4" poster="assets/videos/showreel.jpg"
+            autoplay muted loop playsinline preload="metadata" aria-label="MTMERA video showreel"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEO TYPES ============ -->
+<section class="section-pad" style="padding-top:var(--space-6)">
+  <div class="container">
+
+    <div class="service-category" id="industrial" data-reveal>
+      <div class="service-category-head">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V9l5 3V9l5 3V5h6v15"/></svg></div>
+        <div>
+          <h2><span data-lang="en">For industrial businesses</span><span data-lang="ar">للمشاريع الصناعية</span></h2>
+          <p><span data-lang="en">Show buyers and partners your factory, your production capacity and the quality of what you make.</span>
+          <span data-lang="ar">اعرض للمشترين والشركاء مصنعك وقدرتك الإنتاجية وجودة ما تصنعه.</span></p>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card video-type-card" data-reveal>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+          <h3><span data-lang="en">Factory Tour</span><span data-lang="ar">جولة داخل المصنع</span></h3>
+          <p><span data-lang="en">A walk through your facility, from raw materials to the finished product.</span>
+          <span data-lang="ar">جولة داخل منشأتك، من المواد الخام حتى المنتج النهائي.</span></p>
+        </div>
+        <div class="service-card video-type-card" data-reveal>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+          <h3><span data-lang="en">Production Line &amp; Process</span><span data-lang="ar">خطوط الإنتاج ومراحل التصنيع</span></h3>
+          <p><span data-lang="en">Your machines, your team and your quality checks, explained step by step.</span>
+          <span data-lang="ar">معداتك وفريقك وخطوات فحص الجودة، مشروحة خطوة بخطوة.</span></p>
+        </div>
+        <div class="service-card video-type-card" data-reveal>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3><span data-lang="en">Exhibition Videos</span><span data-lang="ar">فيديوهات المعارض</span></h3>
+          <p><span data-lang="en">A short video for your booth screen, then for follow-ups with the visitors you met.</span>
+          <span data-lang="ar">فيديو قصير لشاشة جناحك في المعرض، ثم للتواصل مع الزوار الذين التقيتهم.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-category" id="commercial" data-reveal>
+      <div class="service-category-head">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <div>
+          <h2><span data-lang="en">For commercial businesses</span><span data-lang="ar">للمشاريع التجارية</span></h2>
+          <p><span data-lang="en">Videos that sell a product, introduce your brand or keep your social media accounts active.</span>
+          <span data-lang="ar">فيديوهات تبيع منتجًا، أو تعرّف بعلامتك التجارية، أو تبقي حساباتك على السوشال ميديا نشطة.</span></p>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card video-type-card" data-reveal>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+          <h3><span data-lang="en">Product Videos</span><span data-lang="ar">فيديو المنتج</span></h3>
+          <p><span data-lang="en">Your product up close: what it is, how it's used and what makes it better.</span>
+          <span data-lang="ar">منتجك عن قرب: ما هو، وكيف يُستخدم، وما الذي يميزه.</span></p>
+        </div>
+        <div class="service-card video-type-card" data-reveal>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></div>
+          <h3><span data-lang="en">Brand Films</span><span data-lang="ar">فيلم تعريفي للعلامة التجارية</span></h3>
+          <p><span data-lang="en">A one-minute film about who you are and what you offer, like the one we made for MTMERA.</span>
+          <span data-lang="ar">فيلم مدته دقيقة عن هويتك وما تقدمه، مثل الفيلم الذي صنعناه لـ MTMERA.</span></p>
+        </div>
+        <div class="service-card video-type-card" data-reveal>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <h3><span data-lang="en">Social Media Reels</span><span data-lang="ar">ريلز السوشال ميديا</span></h3>
+          <p><span data-lang="en">Short vertical videos for Instagram, TikTok and Facebook, including motion graphics.</span>
+          <span data-lang="ar">فيديوهات عمودية قصيرة لإنستغرام وتيك توك وفيسبوك، مع موشن جرافيك.</span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section-pad" id="process">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow" data-reveal><span class="dot"></span>
+        <span data-lang="en">HOW WE WORK</span>
+        <span data-lang="ar">آلية العمل</span>
+      </div>
+      <h2 class="section-title" data-reveal>
+        <span data-lang="en">From idea to finished video</span>
+        <span data-lang="ar">من الفكرة حتى الفيديو النهائي</span>
+      </h2>
+    </div>
+
+    <div class="process-track">
+      <div class="process-line"><div class="process-line-fill" id="processFill"></div></div>
+      <div class="process-grid">
+        <div class="process-step" data-reveal>
+          <div class="process-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <h4><span data-lang="en">Idea &amp; Script</span><span data-lang="ar">الفكرة والسكريبت</span></h4>
+          <p><span data-lang="en">We learn about your business and write the script with you.</span><span data-lang="ar">نتعرف على مشروعك ونكتب السكريبت معك.</span></p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <h4><span data-lang="en">Storyboard</span><span data-lang="ar">الستوري بورد</span></h4>
+          <p><span data-lang="en">You see every shot planned out before anything is produced.</span><span data-lang="ar">ترى كل لقطة مخططة قبل أن نبدأ الإنتاج.</span></p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+          <h4><span data-lang="en">Production</span><span data-lang="ar">الإنتاج</span></h4>
+          <p><span data-lang="en">On-site filming, AI-generated scenes or motion graphics, whichever fits.</span><span data-lang="ar">تصوير في موقعك، أو مشاهد بالذكاء الاصطناعي، أو موشن جرافيك، حسب ما يناسب.</span></p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h4><span data-lang="en">Edit &amp; Delivery</span><span data-lang="ar">المونتاج والتسليم</span></h4>
+          <p><span data-lang="en">Edit, voice-over and music, delivered in 16:9, 9:16 and 1:1.</span><span data-lang="ar">مونتاج وتعليق صوتي وموسيقى، وتسليم بمقاسات 16:9 و9:16 و1:1.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAMPLES ============ -->
+<section class="section-pad" id="samples">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow" data-reveal><span class="dot"></span>
+        <span data-lang="en">OUR VIDEOS</span>
+        <span data-lang="ar">من أعمالنا</span>
+      </div>
+      <h2 class="section-title" data-reveal>
+        <span data-lang="en">Videos we've made</span>
+        <span data-lang="ar">فيديوهات من إنتاجنا</span>
+      </h2>
+    </div>
+
+    <div class="video-grid">
+      <figure class="video-card" data-reveal>
+        <video class="sample-video" src="assets/videos/mtmera-brand-film.mp4" poster="assets/videos/mtmera-brand-film.jpg"
+          controls playsinline preload="none"></video>
+        <figcaption>
+          <b>MTMERA</b>
+          <span data-lang="en">Brand film · 60 sec</span>
+          <span data-lang="ar">فيلم تعريفي · 60 ثانية</span>
+        </figcaption>
+      </figure>
+      <figure class="video-card" data-reveal>
+        <video class="sample-video" src="assets/videos/fabrico-case-study.mp4" poster="assets/videos/fabrico-case-study.jpg"
+          controls playsinline preload="none"></video>
+        <figcaption>
+          <b>Fabrico Textile</b>
+          <span data-lang="en">Case study video · Textile</span>
+          <span data-lang="ar">فيديو دراسة حالة · صناعة نسيج</span>
+        </figcaption>
+      </figure>
+      <figure class="video-card" data-reveal>
+        <video class="sample-video" src="assets/videos/nile-textile-case-study.mp4" poster="assets/videos/nile-textile-case-study.jpg"
+          controls playsinline preload="none"></video>
+        <figcaption>
+          <b>Nile Textile Industries</b>
+          <span data-lang="en">Case study video · Industrial</span>
+          <span data-lang="ar">فيديو دراسة حالة · صناعي</span>
+        </figcaption>
+      </figure>
+      <figure class="video-card" data-reveal>
+        <video class="sample-video" src="assets/videos/makki-labs-case-study.mp4" poster="assets/videos/makki-labs-case-study.jpg"
+          controls playsinline preload="none"></video>
+        <figcaption>
+          <b>MAKKI LAB</b>
+          <span data-lang="en">Case study video · Healthcare</span>
+          <span data-lang="ar">فيديو دراسة حالة · قطاع طبي</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="cta-banner" data-reveal>
+      <div class="cta-blob a"></div>
+      <div class="cta-blob b"></div>
+      <h2><span data-lang="en">Get a quote for your video</span><span data-lang="ar">احصل على عرض سعر لفيديو مشروعك</span></h2>
+      <p><span data-lang="en">Tell us what you make and where the video will be shown, and we'll reply with a price and a timeline.</span><span data-lang="ar">أخبرنا بما تقدمه وأين سيُعرض الفيديو، وسنرد عليك بالسعر والمدة المتوقعة.</span></p>
+      <div class="hero-cta">
+        <button type="button" class="btn btn-primary btn-lg wa-cta"
+          data-wa-en="Hi, I'd like a quote for a promotional video."
+          data-wa-ar="مرحبًا، أود الحصول على عرض سعر لفيديو ترويجي.">
+          <span data-lang="en">Request a Quote</span><span data-lang="ar">اطلب عرض سعر</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <a href="services.html" class="btn btn-ghost btn-lg">
+          <span data-lang="en">View All Services</span><span data-lang="ar">عرض كل الخدمات</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" aria-label="MTMERA">
+        <img class="brand-mark" src="assets/logo-icon.png" alt="MTMERA">
+        <span class="brand-word"><b style="color:#fff">MTM<em>ERA</em></b></span>
+      </a>
+      <p><span data-lang="en">A software and hosting company. We build websites, custom systems and our own SaaS products.</span>
+      <span data-lang="ar">شركة برمجيات واستضافة، نبني المواقع والأنظمة المخصصة ومنتجاتنا الخاصة من SaaS.</span></p>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Company</span><span data-lang="ar">الشركة</span></h5>
+      <ul>
+        <li><a href="about.html"><span data-lang="en">About Us</span><span data-lang="ar">من نحن</span></a></li>
+        <li><a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a></li>
+        <li><a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a></li>
+        <li><a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Services &amp; SaaS</span><span data-lang="ar">الخدمات و SaaS</span></h5>
+      <ul>
+        <li><a href="services.html"><span data-lang="en">All Services</span><span data-lang="ar">كل الخدمات</span></a></li>
+        <li><a href="video-production.html"><span data-lang="en">Video Production</span><span data-lang="ar">إنتاج الفيديو</span></a></li>
+        <li><a href="saas.html"><span data-lang="en">MTMERA SaaS</span><span data-lang="ar">MTMERA SaaS</span></a></li>
+        <li><a href="mtmera-business.html">MTMERA Business</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Contact</span><span data-lang="ar">التواصل</span></h5>
+      <ul>
+        <li><a href="mailto:info@mtmera.com?subject=Inquiry%20from%20mtmera.com&amp;body=Hi%20MTMERA%20team%2C%0D%0A%0D%0A">info@mtmera.com</a></li>
+        <li><a href="tel:+201142006128" dir="ltr">+20 114 200 6128</a></li>
+        <li><a href="https://wa.me/201142006128" target="_blank" rel="noopener"><span data-lang="en">WhatsApp</span><span data-lang="ar">واتساب</span></a></li>
+        <li><a href="index.html#contact"><span data-lang="en">Send a Message</span><span data-lang="ar">أرسل رسالة</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>
+      <span data-lang="en">© 2026 MTMERA. All rights reserved.</span>
+      <span data-lang="ar">© 2026 MTMERA. جميع الحقوق محفوظة.</span>
+    </span>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

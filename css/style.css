@@ -1090,6 +1090,49 @@ html[dir="rtl"] .marquee-track{ animation-direction: reverse; }
 .page-hero{ padding-top: calc(var(--header-h) + 56px); padding-bottom: var(--space-3); }
 
 /* =========================================================
+   Video Production page
+   ========================================================= */
+.video-hero{ display:grid; gap: var(--space-7); align-items:center; }
+@media (min-width:960px){ .video-hero{ grid-template-columns: 1.15fr .85fr; } }
+.video-hero-text .section-desc{ max-width:560px; }
+
+.video-hero-visual{ display:flex; justify-content:center; }
+.video-frame{
+  width:min(300px, 78vw); aspect-ratio: 9 / 16;
+  padding:6px; border-radius:34px;
+  background: var(--brand-gradient);
+  box-shadow: 0 40px 70px -30px hsl(var(--shadow-color) / .55);
+}
+.video-frame video{
+  display:block; width:100%; height:100%; object-fit:cover;
+  border-radius:28px; background:#000;
+}
+
+.video-type-card{ cursor:default; }
+
+.video-grid{
+  display:grid; gap: var(--space-6);
+  grid-template-columns: 1fr;
+  max-width: 1100px; margin-inline:auto;
+}
+@media (min-width:560px){ .video-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (min-width:1080px){ .video-grid{ grid-template-columns: repeat(4,1fr); } }
+
+.video-card{ margin:0; display:flex; flex-direction:column; gap: var(--space-3); max-width:320px; width:100%; justify-self:center; }
+.video-card video{
+  display:block; width:100%; aspect-ratio: 9 / 16; object-fit:cover;
+  border-radius: var(--radius-lg); background:#000;
+  box-shadow: 0 0 0 1px var(--border), 0 24px 48px -28px hsl(var(--shadow-color) / .5);
+}
+.video-card figcaption{ display:flex; flex-direction:column; gap:2px; text-align:center; }
+.video-card figcaption b{ font-size:16px; font-weight:800; color: var(--text); }
+.video-card figcaption span{ font-size:13.5px; color: var(--text-muted); }
+
+/* Homepage services grid with four categories: 2×2, then a single row on wide screens */
+@media (min-width:1080px){ .services-grid.services-grid-4{ grid-template-columns: repeat(2,1fr); } }
+@media (min-width:1200px){ .services-grid.services-grid-4{ grid-template-columns: repeat(4,1fr); } }
+
+/* =========================================================
    Status badges
    ========================================================= */
 .status-badge{
@@ -1212,6 +1255,8 @@ html[dir="rtl"] .marquee-track{ animation-direction: reverse; }
 .solution-card .ic svg{ width:22px; height:22px; }
 .solution-card h3{ font-size:17px; font-weight:800; margin-bottom:8px; }
 .solution-card p{ font-size:14px; color: var(--text-muted); line-height:1.7; }
+.solution-card p a{ color: var(--teal-600); font-weight:700; }
+:root[data-theme="dark"] .solution-card p a{ color: var(--cyan-300); }
 
 /* =========================================================
    Our Work — filters + empty state
