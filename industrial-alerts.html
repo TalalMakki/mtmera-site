@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  var t = localStorage.getItem('mtmera-theme');
+  if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+  /* Apply the saved language before first paint so RTL layout (and the
+     off-canvas menu position) doesn't flip, and animate, after load. */
+  if (localStorage.getItem('mtmera-lang') === 'ar') {
+    document.documentElement.setAttribute('lang', 'ar');
+    document.documentElement.setAttribute('dir', 'rtl');
+  }
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MTMERA Industrial Alerts — Payment, Stock &amp; Import Alerts for Factories</title>
+<meta name="description" content="MTMERA Industrial Alerts watches factory payment due dates, raw-material stock and import shipments, and alerts the right person on their phone. Coming soon.">
+<meta name="mtmera:title-ar" content="MTMERA Industrial Alerts — تنبيهات المدفوعات والمخزون والاستيراد للمصانع">
+<meta name="mtmera:desc-ar" content="نظام MTMERA Industrial Alerts يتابع مواعيد مدفوعات المصنع ومخزون الخامات وشحنات الاستيراد، وينبّه المسؤول على جواله. قريبًا.">
+<link rel="canonical" href="https://mtmera.com/industrial-alerts.html">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-lang="en">Skip to content</a>
+<a class="skip-link" href="#main" data-lang="ar">تخطَّ إلى المحتوى</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="MTMERA home">
+      <img class="brand-mark" src="assets/logo-icon.png" alt="MTMERA logo">
+      <span class="brand-word">
+        <b>MTM<em>ERA</em></b>
+        <span data-lang="en">Software · Cloud · Hosting</span>
+        <span data-lang="ar">برمجيات · سحابة · استضافة</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="services.html"><span data-lang="en">Services</span><span data-lang="ar">خدماتنا</span></a>
+      <a href="saas.html"><span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span></a>
+      <a href="solutions.html"><span data-lang="en">Solutions</span><span data-lang="ar">الحلول</span></a>
+      <a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a>
+      <a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a>
+      <a href="about.html"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a>
+      <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="index.html#contact" class="btn btn-primary nav-cta">
+        <span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span>
+      </a>
+      <button class="lang-btn" id="langToggle" type="button" aria-label="Change language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span data-lang="en">AR</span>
+        <span data-lang="ar">EN</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-scrim" id="navScrim"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="services.html"><span data-lang="en">Services</span><span data-lang="ar">خدماتنا</span></a>
+  <a href="saas.html"><span data-lang="en">SaaS</span><span data-lang="ar">SaaS</span></a>
+  <a href="solutions.html"><span data-lang="en">Solutions</span><span data-lang="ar">الحلول</span></a>
+  <a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a>
+  <a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a>
+  <a href="about.html"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a>
+  <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a>
+  <a href="index.html#contact" class="mobile-nav-cta"><span data-lang="en">Get Started</span><span data-lang="ar">ابدأ الآن</span></a>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="section-pad page-hero">
+  <div class="container">
+    <div class="back-links-row" data-reveal>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-lang="en">Back to Home</span>
+        <span data-lang="ar">الرجوع للرئيسية</span>
+      </a>
+      <span class="back-link-sep">·</span>
+      <a href="saas.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-lang="en">Back to MTMERA SaaS</span>
+        <span data-lang="ar">الرجوع لـ MTMERA SaaS</span>
+      </a>
+    </div>
+
+    <div class="section-head center">
+      <div class="status-badge soon" data-reveal style="margin-bottom:var(--space-4)">
+        <span class="dot"></span>
+        <span data-lang="en">Coming Soon</span>
+        <span data-lang="ar">قريبًا</span>
+      </div>
+      <h1 class="section-title" data-reveal>MTMERA Industrial Alerts</h1>
+      <p class="saas-product-tagline" data-reveal>
+        <span data-lang="en">Alerts for factory payments, stock and imports</span>
+        <span data-lang="ar">تنبيهات لمدفوعات المصنع ومخزونه ووارداته</span>
+      </p>
+      <p class="section-desc" data-reveal style="margin-inline:auto">
+        <span data-lang="en">A system that watches your factory's payment due dates, raw-material stock and import shipments, and alerts the right person on their phone before a payment is missed, a material runs out or a shipment is delayed.</span>
+        <span data-lang="ar">نظام يتابع مواعيد استحقاق مدفوعات مصنعك، ومخزون الخامات، وشحنات الاستيراد، وينبّه الشخص المسؤول على جواله قبل أن يفوت موعد دفعة، أو تنفد مادة، أو تتأخر شحنة.</span>
+      </p>
+      <div class="hero-cta" style="justify-content:center" data-reveal>
+        <button type="button" class="btn btn-primary btn-lg wa-cta"
+          data-wa-en="Hi, I'd like a demo of MTMERA Industrial Alerts."
+          data-wa-ar="مرحبًا، أودّ الاطلاع على عرض توضيحي لنظام MTMERA Industrial Alerts.">
+          <span data-lang="en">Request a Demo</span><span data-lang="ar">اطلب عرضًا توضيحيًا</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <a href="#features" class="btn btn-ghost btn-lg">
+          <span data-lang="en">See What It Does</span><span data-lang="ar">تعرّف على المزايا</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREVIEW ============ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="ia-preview" data-reveal>
+      <div class="mockup-frame">
+        <div class="mockup-bar"><span></span><span></span><span></span></div>
+        <img src="assets/saas/industrial-alerts/dash-en.webp" data-lang="en" class="mockup-screenshot lang-img" width="1440" height="900" loading="lazy" alt="MTMERA Industrial Alerts home screen: overdue payments, amounts due this week and payments by type">
+        <img src="assets/saas/industrial-alerts/dash-ar.webp" data-lang="ar" class="mockup-screenshot lang-img" width="1440" height="900" loading="lazy" alt="الشاشة الرئيسية في MTMERA Industrial Alerts: الدفعات المتأخرة والمستحق خلال الأسبوع والمدفوعات حسب النوع">
+      </div>
+      <div class="ia-phone">
+        <img src="assets/saas/industrial-alerts/phone-dash-en.webp" data-lang="en" class="lang-img" width="600" height="1298" loading="lazy" alt="The same home screen on a phone">
+        <img src="assets/saas/industrial-alerts/phone-dash-ar.webp" data-lang="ar" class="lang-img" width="600" height="1298" loading="lazy" alt="الشاشة الرئيسية نفسها على الجوال">
+      </div>
+    </div>
+    <p class="ia-caption" data-reveal>
+      <span data-lang="en">Screens from the system with sample data.</span>
+      <span data-lang="ar">لقطات من النظام ببيانات تجريبية.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ THREE AREAS ============ -->
+<section class="section-pad" id="features" style="padding-top:var(--space-6)">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow" data-reveal><span class="dot"></span>
+        <span data-lang="en">WHAT IT WATCHES</span>
+        <span data-lang="ar">ما الذي يتابعه</span>
+      </div>
+      <h2 class="section-title" data-reveal>
+        <span data-lang="en">Three things a factory can't afford to miss</span>
+        <span data-lang="ar">ثلاثة أمور لا يحتمل المصنع أن تفوته</span>
+      </h2>
+    </div>
+
+    <div class="ia-feature" data-reveal>
+      <div class="ia-feature-copy">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+        <h3><span data-lang="en">Payments and due dates</span><span data-lang="ar">المدفوعات ومواعيد استحقاقها</span></h3>
+        <p>
+          <span data-lang="en">Supplier invoices, payroll, social insurance, rent, utilities and taxes in one list, with installments and recurring payments. The system warns before each due date, flags what is overdue, and sends new obligations for approval.</span>
+          <span data-lang="ar">فواتير الموردين والرواتب والتأمينات الاجتماعية والإيجار والمرافق والضرائب في قائمة واحدة، مع الأقساط والمدفوعات الدورية. ينبّه النظام قبل كل موعد استحقاق، ويحدد ما تأخر سداده، ويرسل الالتزامات الجديدة للاعتماد.</span>
+        </p>
+      </div>
+      <div class="mockup-frame">
+        <div class="mockup-bar"><span></span><span></span><span></span></div>
+        <img src="assets/saas/industrial-alerts/alerts-en.webp" data-lang="en" class="mockup-screenshot lang-img" width="1440" height="900" loading="lazy" alt="Alerts list with overdue payments, stock-out risks and a delayed import stage">
+        <img src="assets/saas/industrial-alerts/alerts-ar.webp" data-lang="ar" class="mockup-screenshot lang-img" width="1440" height="900" loading="lazy" alt="قائمة التنبيهات: دفعات متأخرة وخطر نفاد مخزون وتأخر مرحلة استيراد">
+      </div>
+    </div>
+
+    <div class="ia-feature reverse" data-reveal>
+      <div class="ia-feature-copy">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <h3><span data-lang="en">Raw-material coverage</span><span data-lang="ar">تغطية الخامات</span></h3>
+        <p>
+          <span data-lang="en">From stock counts and consumption, the system calculates how many days each material will last and when it runs out, taking incoming orders and shipments into account. Materials below their minimum or at risk of running out are raised as alerts.</span>
+          <span data-lang="ar">من أرقام الجرد والاستهلاك يحسب النظام عدد الأيام التي تكفيها كل مادة وموعد نفادها، مع احتساب أوامر التوريد والشحنات القادمة. وتظهر المواد التي تقل عن حدها الأدنى أو المعرّضة للنفاد في صورة تنبيهات.</span>
+        </p>
+      </div>
+      <div class="mockup-frame">
+        <div class="mockup-bar"><span></span><span></span><span></span></div>
+        <img src="assets/saas/industrial-alerts/coverage-en.webp" data-lang="en" class="mockup-screenshot lang-img" width="1440" height="900" loading="lazy" alt="Material coverage screen showing days of stock left for each material">
+        <img src="assets/saas/industrial-alerts/coverage-ar.webp" data-lang="ar" class="mockup-screenshot lang-img" width="1440" height="900" loading="lazy" alt="شاشة تغطية المواد تعرض عدد أيام المخزون المتبقية لكل مادة">
+      </div>
+    </div>
+
+    <div class="ia-feature" data-reveal>
+      <div class="ia-feature-copy">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1 2.4 2.4 0 0 1 2-1 2.4 2.4 0 0 1 2 1 2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1 2.4 2.4 0 0 1 2-1 2.4 2.4 0 0 1 2 1 2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/></svg></div>
+        <h3><span data-lang="en">Import files</span><span data-lang="ar">ملفات الاستيراد</span></h3>
+        <p>
+          <span data-lang="en">Each shipment follows its stages from invoice and bank transfer to shipping, customs and receipt at the warehouse, with its documents, payment plan and expected dates. A late stage or a missing document raises an alert, and the alert is critical when a material on that shipment is already short.</span>
+          <span data-lang="ar">تمرّ كل شحنة بمراحلها من الفاتورة والتحويل البنكي إلى الشحن والجمارك والاستلام في المخزن، مع مستنداتها وخطة دفعاتها وتواريخها المتوقعة. ويصدر تنبيه عند تأخر أي مرحلة أو نقص أي مستند، ويكون التنبيه حرجًا إذا كانت إحدى مواد الشحنة معرّضة للنفاد.</span>
+        </p>
+      </div>
+      <div class="mockup-frame">
+        <div class="mockup-bar"><span></span><span></span><span></span></div>
+        <img src="assets/saas/industrial-alerts/import-en.webp" data-lang="en" class="mockup-screenshot lang-img" width="1440" height="900" loading="lazy" alt="Import file page with a delayed stage warning, dates and payment plan">
+        <img src="assets/saas/industrial-alerts/import-ar.webp" data-lang="ar" class="mockup-screenshot lang-img" width="1440" height="900" loading="lazy" alt="صفحة ملف استيراد فيها تحذير من مرحلة متأخرة والتواريخ وخطة الدفعات">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section-pad" id="process">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow" data-reveal><span class="dot"></span>
+        <span data-lang="en">HOW IT WORKS</span>
+        <span data-lang="ar">طريقة العمل</span>
+      </div>
+      <h2 class="section-title" data-reveal>
+        <span data-lang="en">From your data to an alert on the right phone</span>
+        <span data-lang="ar">من بياناتك إلى تنبيه على الجوال المناسب</span>
+      </h2>
+    </div>
+
+    <div class="process-track">
+      <div class="process-line"><div class="process-line-fill" id="processFill"></div></div>
+      <div class="process-grid">
+        <div class="process-step" data-reveal>
+          <div class="process-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg></div>
+          <h4><span data-lang="en">Enter your data</span><span data-lang="ar">أدخل بياناتك</span></h4>
+          <p><span data-lang="en">By hand or from ready Excel templates.</span><span data-lang="ar">يدويًا أو من قوالب Excel جاهزة.</span></p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h4><span data-lang="en">The system checks</span><span data-lang="ar">يراجع النظام</span></h4>
+          <p><span data-lang="en">Due dates, stock and shipments are checked on a schedule.</span><span data-lang="ar">تُراجع المواعيد والمخزون والشحنات وفق جدول زمني.</span></p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+          <h4><span data-lang="en">The right person is alerted</span><span data-lang="ar">يُنبَّه المسؤول</span></h4>
+          <p><span data-lang="en">On their phone or computer, according to their role.</span><span data-lang="ar">على جواله أو حاسوبه، بحسب دوره في المصنع.</span></p>
+        </div>
+        <div class="process-step" data-reveal>
+          <div class="process-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg></div>
+          <h4><span data-lang="en">Escalation</span><span data-lang="ar">التصعيد</span></h4>
+          <p><span data-lang="en">If nobody acts, the alert goes up to the manager.</span><span data-lang="ar">إذا لم يتعامل أحد مع التنبيه، يُرفع إلى المدير.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MORE FEATURES ============ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow" data-reveal><span class="dot"></span>
+        <span data-lang="en">ALSO INCLUDED</span>
+        <span data-lang="ar">يتضمن أيضًا</span>
+      </div>
+      <h2 class="section-title" data-reveal>
+        <span data-lang="en">Built around how a factory works</span>
+        <span data-lang="ar">مبني على طريقة عمل المصنع</span>
+      </h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card video-type-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <h3><span data-lang="en">Phone notifications</span><span data-lang="ar">إشعارات على الجوال</span></h3>
+        <p><span data-lang="en">Install the app on Android, iPhone or a computer from the browser and receive alerts as notifications, with no app store needed.</span>
+        <span data-lang="ar">ثبّت التطبيق على أندرويد أو آيفون أو الحاسوب من المتصفح، واستقبل التنبيهات في صورة إشعارات دون الحاجة إلى متجر تطبيقات.</span></p>
+      </div>
+      <div class="service-card video-type-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3><span data-lang="en">Roles for every job</span><span data-lang="ar">أدوار لكل وظيفة</span></h3>
+        <p><span data-lang="en">Owner, factory manager, accounts, imports, storekeepers, security and HR each see only what concerns them.</span>
+        <span data-lang="ar">المالك ومدير المصنع والحسابات والاستيراد وأمناء المخازن والأمن والموارد البشرية، يرى كلٌّ منهم ما يخصه فقط.</span></p>
+      </div>
+      <div class="service-card video-type-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3><span data-lang="en">Approvals</span><span data-lang="ar">الاعتمادات</span></h3>
+        <p><span data-lang="en">New payment obligations and import files wait for approval by the owner, factory manager or accounts management.</span>
+        <span data-lang="ar">تنتظر الالتزامات المالية الجديدة وملفات الاستيراد اعتماد المالك أو مدير المصنع أو إدارة الحسابات.</span></p>
+      </div>
+      <div class="service-card video-type-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3><span data-lang="en">Receiving desk</span><span data-lang="ar">مكتب الاستلام</span></h3>
+        <p><span data-lang="en">Security confirms a shipment's arrival at the gate, then the storekeeper confirms the quantities received.</span>
+        <span data-lang="ar">يؤكد الأمن وصول الشحنة عند البوابة، ثم يؤكد أمين المخزن الكميات المستلمة.</span></p>
+      </div>
+      <div class="service-card video-type-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg></div>
+        <h3><span data-lang="en">Tasks and reports</span><span data-lang="ar">المهام والتقارير</span></h3>
+        <p><span data-lang="en">Turn an alert into a task with an owner, and export payment aging, cash-out, coverage and import reports to Excel.</span>
+        <span data-lang="ar">حوّل أي تنبيه إلى مهمة لها مسؤول، وصدّر تقارير أعمار المستحقات والمدفوعات المتوقعة والتغطية والاستيراد إلى Excel.</span></p>
+      </div>
+      <div class="service-card video-type-card" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3><span data-lang="en">Audit trail</span><span data-lang="ar">سجل التدقيق</span></h3>
+        <p><span data-lang="en">Every change, approval and recorded payment is logged with who made it and when.</span>
+        <span data-lang="ar">يُسجَّل كل تعديل واعتماد ودفعة مسجّلة، مع اسم من قام به ووقته.</span></p>
+      </div>
+    </div>
+
+    <p class="section-desc ia-note" data-reveal>
+      <span data-lang="en">MTMERA Industrial Alerts is an operational follow-up tool, not an accounting system: it does not make payments, and its balances are estimates built from the obligations and payments you record. The interface is in Arabic and English.</span>
+      <span data-lang="ar">MTMERA Industrial Alerts أداة متابعة تشغيلية وليس نظامًا محاسبيًا؛ فهو لا ينفّذ أي دفعات، وأرصدته تقديرية مبنية على الالتزامات والدفعات التي تسجّلها. والواجهة متاحة بالعربية والإنجليزية.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="cta-banner" data-reveal>
+      <div class="cta-blob a"></div>
+      <div class="cta-blob b"></div>
+      <h2><span data-lang="en">Launching soon</span><span data-lang="ar">قريبًا</span></h2>
+      <p><span data-lang="en">Message us on WhatsApp to see a demo, or to be told when it launches.</span><span data-lang="ar">راسلنا عبر واتساب لتشاهد عرضًا توضيحيًا، أو لنبلغك عند الإطلاق.</span></p>
+      <div class="hero-cta">
+        <button type="button" class="btn btn-primary btn-lg wa-cta"
+          data-wa-en="Hi, I'd like a demo of MTMERA Industrial Alerts."
+          data-wa-ar="مرحبًا، أودّ الاطلاع على عرض توضيحي لنظام MTMERA Industrial Alerts.">
+          <span data-lang="en">Request a Demo</span><span data-lang="ar">اطلب عرضًا توضيحيًا</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mirror-rtl"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <a href="saas.html" class="btn btn-ghost btn-lg">
+          <span data-lang="en">All Products</span><span data-lang="ar">كل المنتجات</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" aria-label="MTMERA">
+        <img class="brand-mark" src="assets/logo-icon.png" alt="MTMERA">
+        <span class="brand-word"><b style="color:#fff">MTM<em>ERA</em></b></span>
+      </a>
+      <p><span data-lang="en">A software and hosting company. We build websites, custom systems and our own SaaS products.</span>
+      <span data-lang="ar">شركة برمجيات واستضافة، نبني المواقع والأنظمة المخصصة ومنتجاتنا الخاصة من SaaS.</span></p>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Company</span><span data-lang="ar">الشركة</span></h5>
+      <ul>
+        <li><a href="about.html"><span data-lang="en">About Us</span><span data-lang="ar">من نحن</span></a></li>
+        <li><a href="our-work.html"><span data-lang="en">Our Work</span><span data-lang="ar">أعمالنا</span></a></li>
+        <li><a href="pricing.html"><span data-lang="en">Pricing</span><span data-lang="ar">الأسعار</span></a></li>
+        <li><a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Services &amp; SaaS</span><span data-lang="ar">الخدمات و SaaS</span></h5>
+      <ul>
+        <li><a href="services.html"><span data-lang="en">All Services</span><span data-lang="ar">كل الخدمات</span></a></li>
+        <li><a href="video-production.html"><span data-lang="en">Video Production</span><span data-lang="ar">إنتاج الفيديو</span></a></li>
+        <li><a href="saas.html"><span data-lang="en">MTMERA SaaS</span><span data-lang="ar">MTMERA SaaS</span></a></li>
+        <li><a href="mtmera-business.html">MTMERA Business</a></li>
+        <li><a href="industrial-alerts.html">MTMERA Industrial Alerts</a></li>
+        <li><a href="industrial-alerts.html">MTMERA Industrial Alerts</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5><span data-lang="en">Contact</span><span data-lang="ar">التواصل</span></h5>
+      <ul>
+        <li><a href="mailto:info@mtmera.com?subject=Inquiry%20from%20mtmera.com&amp;body=Hi%20MTMERA%20team%2C%0D%0A%0D%0A">info@mtmera.com</a></li>
+        <li><a href="tel:+201142006128" dir="ltr">+20 114 200 6128</a></li>
+        <li><a href="https://wa.me/201142006128" target="_blank" rel="noopener"><span data-lang="en">WhatsApp</span><span data-lang="ar">واتساب</span></a></li>
+        <li><a href="index.html#contact"><span data-lang="en">Send a Message</span><span data-lang="ar">أرسل رسالة</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>
+      <span data-lang="en">© 2026 MTMERA. All rights reserved.</span>
+      <span data-lang="ar">© 2026 MTMERA. جميع الحقوق محفوظة.</span>
+    </span>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

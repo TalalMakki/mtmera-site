@@ -1128,6 +1128,69 @@ html[dir="rtl"] .marquee-track{ animation-direction: reverse; }
 .video-card figcaption b{ font-size:16px; font-weight:800; color: var(--text); }
 .video-card figcaption span{ font-size:13.5px; color: var(--text-muted); }
 
+/* =========================================================
+   Industrial Alerts product page
+   ========================================================= */
+/* Per-language screenshots: beats .mockup-screenshot{display:block} so only one language shows */
+html[lang="en"] .lang-img[data-lang="ar"],
+html[lang="ar"] .lang-img[data-lang="en"]{ display:none; }
+
+.ia-preview{ position:relative; max-width:960px; margin-inline:auto; padding-bottom: var(--space-6); }
+.ia-phone{
+  position:absolute; inset-inline-end: -12px; bottom: 0;
+  width: clamp(110px, 21%, 200px);
+  padding:5px; border-radius:26px;
+  background: var(--navy-900);
+  box-shadow: 0 30px 60px -20px hsl(var(--shadow-color) / .6);
+}
+.ia-phone img{ display:block; width:100%; height:auto; border-radius:21px; }
+.ia-caption{ text-align:center; font-size:13px; color: var(--text-soft); margin-top: var(--space-3); }
+
+.ia-feature{ display:grid; gap: var(--space-6); align-items:center; margin-top: var(--space-8); }
+@media (min-width:960px){
+  .ia-feature{ grid-template-columns: .85fr 1.15fr; gap: var(--space-8); }
+  .ia-feature.reverse{ grid-template-columns: 1.15fr .85fr; }
+  .ia-feature.reverse .ia-feature-copy{ order:2; }
+}
+.ia-feature-copy .ic{
+  width:48px; height:48px; border-radius: var(--radius-md);
+  display:flex; align-items:center; justify-content:center;
+  background: var(--brand-gradient); color:#fff; margin-bottom: var(--space-4);
+}
+.ia-feature-copy .ic svg{ width:24px; height:24px; }
+.ia-feature-copy h3{ font-size: clamp(20px, 2.4vw, 24px); font-weight:800; margin-bottom: var(--space-3); }
+.ia-feature-copy p{ color: var(--text-muted); font-size:15.5px; line-height:1.8; }
+.ia-note{ margin: var(--space-7) auto 0; max-width:760px; text-align:center; font-size:14.5px; }
+
+.saas-spotlight + .saas-spotlight{ margin-top: var(--space-7); }
+
+/* Small phones (≤420px): long button labels wrap instead of pushing the page sideways,
+   and padded boxes give their content more room. */
+@media (max-width:420px){
+  .btn{ white-space:normal; text-align:center; max-width:100%; }
+  .btn-lg{ padding: 15px 24px; font-size:15.5px; }
+  .saas-spotlight{ padding: var(--space-5); gap: var(--space-6); }
+  .cta-banner{ padding: var(--space-7) var(--space-4); }
+  .contact-form{ padding: var(--space-5); }
+  .footer-grid > *{ min-width:0; }
+  .ia-phone{ inset-inline-end: -4px; }
+  .highlights-grid{ gap: var(--space-4); }
+  .highlights-grid > *{ min-width:0; }
+  .highlight-item{ gap:10px; }
+  .highlight-item .ic{ width:38px; height:38px; }
+  .price-toggle-btn{ padding: 9px 14px; }
+}
+@media (max-width:640px){
+  .ia-phone{ inset-inline-end: 0; }
+}
+/* On a phone the desktop screenshot is too small to read and the overlay would cover it:
+   show only the phone screenshot, centred and readable. */
+@media (max-width:480px){
+  .ia-preview{ padding-bottom:0; }
+  .ia-preview .mockup-frame{ display:none; }
+  .ia-phone{ position:static; width: min(250px, 72vw); margin-inline:auto; }
+}
+
 /* Homepage services grid with four categories: 2×2, then a single row on wide screens */
 @media (min-width:1080px){ .services-grid.services-grid-4{ grid-template-columns: repeat(2,1fr); } }
 @media (min-width:1200px){ .services-grid.services-grid-4{ grid-template-columns: repeat(4,1fr); } }
@@ -1207,7 +1270,7 @@ html[dir="rtl"] .marquee-track{ animation-direction: reverse; }
   background: var(--navy-950);
 }
 .mockup-bar span{ width:9px; height:9px; border-radius:50%; background: rgba(255,255,255,.18); }
-.mockup-screenshot{ width:100%; display:block; }
+.mockup-screenshot{ width:100%; height:auto; display:block; }
 .mockup-body{
   position:relative;
   padding: var(--space-6);
